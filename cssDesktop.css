@@ -1,0 +1,298 @@
+#menuIcon{
+	display: none;
+}
+#searchIconTab{
+	display: none;
+	
+}
+.closebtn{
+	display: none;
+}
+
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #000000;
+  overflow-x: hidden;
+}
+.header {
+  overflow: hidden;
+  background-color: white;
+  padding: 2px 0px;
+  width: 100%;
+  justify-content: center;
+  order: 1;
+  position: fixed;
+  top: 0;
+	
+}
+.header a {
+  color: #006600;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 4px;
+  
+}
+.header a:hover {
+  background-color: #006600;
+  color: white;
+}
+.header-right {
+  	text-decoration-style: solid;
+  	float: right;
+  	margin-bottom: auto;
+  	line-height: 65px;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+	overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+
+li.dropdown {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: #f9f9f9;
+    width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: #003300;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+	line-height: normal;
+	overflow: hidden;
+}
+
+.dropdown-content a:hover {color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+  
+.siteImage{
+	width: 100%;
+	order: 2;
+	margin-top: 70px;
+}
+.centerImage{
+	width: 100%;
+	height: 400px;
+	display: block;
+}
+
+.inecLogo{
+	width: 100%;
+	height: auto;
+}
+.inec_logo{
+	width: 100%; 
+	height: 150px;
+}
+
+.mainBody{
+	width: 100%;
+	order: 3;
+	background-color: #000000;
+	align-content: center;
+	justify-content: center;
+	padding: 30px 80px;
+}
+.votingSection1{
+	width: 100%;
+	height: auto;
+	color: #cccccc;
+	text-align: justify;
+}
+p{
+	font-size: 18px;
+}
+h4{
+align-content: center;
+	color: #003300;
+	font-size: 20px;
+}
+h3{
+	color: #003300;
+	font-size: 24px;
+}
+.h3{
+	color: #bfbfbf;
+	font-size: 24px;
+}
+h5{
+	font-size: 18px;
+}
+.votingSection2{
+	width: 96%;
+	height: auto;
+	background-color: #ffffff;
+	color: #000000;
+	padding: 20px 30px;
+	text-align: justify;
+	align-content: center;
+	display: flex;
+	flex-wrap: wrap;
+
+}
+.votingSection2Divs{
+	width: 50%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	padding: 20px 0px;
+	
+}
+.mainBodyIcons_div{
+	width: 30%;
+	padding-top: 40px;
+	padding-left: 10px;
+}
+.mainBodyIcons{
+	justify-content: center;
+	width: 80%;
+	height: 100px;
+	background-color: #003300;
+	border-radius: 50%;
+}
+.mainBodyIconsDetails{
+	width: 60%;
+}
+#eligibilitySection{
+	background-color: #000000;
+	color: #ffffff;
+	text-align: justify;
+}
+.diams{
+	font-size: 20px;
+}
+
+#arrowButton{
+	width: 100%;
+	border-radius: 2px;
+	background-color: #003300;
+	color: #f1f1f1;
+}
+#darr{
+	font-size: 15px;
+}
+
+.newsSection{
+	width: 100%;
+	height: auto;
+	background-color: #ffffff;
+	order: 4;
+	align-content: center;
+}
+#newsCaption{
+	width: 100%;
+	color: #003300;
+	margin-left: 60px;
+}
+#newsDivs1st4{
+	width: 90%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0px 30px 0px 30px;
+}
+#hidePhone{
+	width: 90%;
+	height: auto;
+	display: none;
+	flex-wrap: wrap;
+	padding: 0px 30px 0px 30px;
+}
+.newsDivs{
+	width: 45%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: 30px;
+	padding: 10px 0px;
+}
+.newsPhoto_div{
+	width: 40%;
+	height: auto;
+	padding-right: 10px;
+}
+.newsPhoto{
+	width: 100%;
+	height: 120px;
+}
+.newsDetails{
+	width: 55%;
+	height: auto;
+	text-align: justify;
+}
+.newsDetails a:hover {
+	text-decoration: underline #000000;
+}
+#disclaimer{
+	widows: 100%;
+	height: auto;
+	background-color: #000000;
+	color: #bfbfbf;
+	order: 5;
+	border-bottom-style: solid;
+	border-bottom-width: 4px;
+	border-color: #bfbfbf;
+	margin: 10px 5px 0px 5px;
+	padding: 30px 20px 30px 20px;
+	font-family: cursive;
+	font-size: 20px;
+	justify-content: center;
+}
+#footer{
+	width: 100%;
+	height: auto;
+	order: 6;
+	background-color: #000000;
+	color: #bfbfbf;
+	padding: 10px 60px;
+	align-content: center;
+	}
+#footer_divsContainer1{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+.footer_divs1{
+	width: 23%;
+	height: auto;
+	padding: 5px 8px;
+}
+.footer_divs1 a:hover {
+	text-decoration: underline #bfbfbf;
+	text-underline-position: below;
+}
+#footer_divsContainer2{
+	width: 100%;
+	height: auto;
+}
+.footer_divs2{
+	width: 100%;
+	height: auto;
+	text-align: center;
+}

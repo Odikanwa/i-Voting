@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Electronic Voting(voting)">
+    <meta name="keywords" content="Nigerian election, Vote Nigeria, evoting Nigeria">
+    <meta name="author" content="Odikanwa Michael, Ekwedike Patrick">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="evoting.css">
+	<link rel="stylesheet" href="cssPhone.css" media="screen and (max-width:399px)">
+    <link rel="stylesheet" href="cssTablet.css" media="screen and (min-width: 400px) and (max-width:750px)">
+    <link rel="stylesheet" href="cssDesktop.css" media="screen and (min-width:751px)">
+	<script src="evotingMainScript.js" defer="true"></script>
+
+<title>Evoting Nigeria</title>
+<!--[if lt IE 9]>/
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+ <![endif]-->
+</head> 
+<body>
+    <div class="container">
+    <header class="header">
+    <picture>
+		<source media="(max-width: 399px)" srcset="Images/evotingLogo1.png">
+        <source media="(min-width: 400px) and (max-width:750px)" srcset="Images/evotingLogo2.png">
+        <source media="(min-width: 751px)" srcset="Images/evotingLogo40.png">
+    <img src="Images/evotingLogo1.png" alt="Evoting Icon" id="evotingLogo">
+    </picture>
+		<div id="menuIcon">
+	<a href="#" id="menuIcons"><span onclick="openNav()"><img src="Images/menuIcon1.png" alt="Menu Icon" class="menuIcon1" ></span></a>
+		</div>
+		
+	<div id="searchIconTab">
+	<a href="#" id="searchIconTablet"><img src="Images/searchIcon2.png" alt="Search Icon" class="searchIcon2"></a>
+		</div>
+	<div id="responsiveMenu" class="header-right">
+		<div><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></div>
+		<ul>
+    	<li><a class="active" href="#home">Home</a></li>
+    	<li class="dropdown">
+			<a href="#" class="dropbtn" onclick="openRegisterDropdown()">Register <span id="darrRegister" >&#9207;</span></a>
+			<div class="dropdown-content" id="darrRegisterDiv">
+      		<a href="#">Candidate</a>
+      		<a href="registeration_form1.html" target="_blank">Voter</a>
+    		</div>
+		</li>
+    	<li><a href="#">Login</a></li>
+		<li class="dropdown">
+			<a href="#" class="dropbtn" onclick="openVoteDropdown()">Vote <span id="darrVote">&#9207;</span></a>
+			<div class="dropdown-content" id="darrVoteDiv">
+      			<a href="#">Presidential</a>
+      			<a href="#">Gubernatorial</a>
+      			<a href="#">Local govt.</a>
+				<a href="#">Senate</a>
+				<a href="#">House of reps.</a>
+				<a href="#">State HOA</a>
+    		</div>
+			</li>
+		<li class="dropdown">
+			<a href="#" class="dropbtn" onclick="openResultsDropdown()">Results <span id="darrResults">&#9207;</span></a>
+			<div class="dropdown-content" id="darrResultsDiv">
+      			<a href="#">Presidential</a>
+      			<a href="#">Gubernatorial</a>
+      			<a href="#">Local govt.</a>
+				<a href="#">Senate</a>
+				<a href="#">House of reps.</a>
+				<a href="#">State HOA</a>
+    		</div>
+		</li>
+		<li class="dropdown">
+			<a href="#" class="dropbtn" onclick="openContactUsDropdown()">Contact Us <span id="darrContactUs">&#9207;</span></a>
+			<div class="dropdown-content" id="darrContactUsDiv">
+      			<a href="#">About Us</a>
+      			<a href="#">FAQs</a>
+      			<a href="#">Complaints</a>
+    		</div>
+			</li>
+		<li><a href="#">&#128269;</a></li>
+		</ul>
+		</div>
+	</header>
+	<div class="siteImage"><img src="images/centerimage2.jpg" class="centerImage"></div>
+	<div class="mainBody">
+	<div class="votingSection1">
+		<h3 class="h3">PORTAL HISTORY</h3>
+		<p>e-INEC Nigeria is the official Nigeria online portal for Nigerian election processes operated by the Independent National Electoral Commission (INEC).   INEC in its responsibility of ensuring more credible Nigerians are duly involved in the nation's electioneering processes have decided to establish a transparent, efficient and user-friendly online presence recognized by the provisions of the Nigerian constitution using the geometric fingerprint Identification system as its core.
+		e-INEC Nigeria does not run any private websites or blogs and has no intention of running any. All information contained or obtained herein are statutorily censored by INEC and its open for election monitoring groups scrutiny. However, all personal details entered by the users are solely the properties of the federal republic of Nigeria and are treated as strictly confidential. Only the user is permitted access to such information for possible editing where applicable.
+		</p>
+		<p>It should suffice to point out that the site uses the latest internet safety sophistications to ensure that all information transmitted through are safe and uncompromised. Following global best election practices, we on oath assure all users of credible free and fair elections. The entire electioneering processes shall be visibly transparent on this site.
+		</p>
+	</div>
+	<div class="votingSection2">
+		<div>
+			<h3>SITE TOUR</h3>
+			<p>The site is broken down into the Navigation pane, the content section, sidebars and the footer section. The most important links are briefly explained in bullets below:</p>
+		</div>
+		<div class="votingSection2Divs">
+			<div class="mainBodyIcons_div" >
+				<img src="images/menuIcon.png" class="mainBodyIcons">
+			</div>
+			<div class="mainBodyIconsDetails">
+				<h3>Menu</h3>
+				<p>Only present in smaller screens (mobiles). Contains all other links as listed below.</p>
+			</div>
+		</div>
+		<div class="votingSection2Divs">
+			<div class="mainBodyIcons_div">
+				<img src="images/homeIcon.png" class="mainBodyIcons">
+			</div>
+			<div class="mainBodyIconsDetails">
+				<h3>Home</h3>
+				<p>The default link showing the general overview of the site; first page seen when site loads.</p>
+			</div>
+		</div>
+		<div class="votingSection2Divs">
+			<div class="mainBodyIcons_div">
+				<img src="images/registerIcon.png" class="mainBodyIcons">
+			</div>
+			<div class="mainBodyIconsDetails">
+				<h3>Register</h3>
+				<p>Allows first time users (i.e party nominees and voters) to enter their information, create a profile and be eligible to vote and be voted for. The information provided is subject to strict scrutiny and investigation by INEC.</p>
+			</div>
+		</div>
+		<div class="votingSection2Divs">
+			<div class="mainBodyIcons_div">
+				<img src="images/loginIcon.png" class="mainBodyIcons">
+			</div>
+			<div class="mainBodyIconsDetails">
+				<h3>Login</h3>
+				<p>Allows all eligible users to access their profile and edit where permissible.</p>
+			</div>
+		</div>
+		<div class="votingSection2Divs">
+			<div class="mainBodyIcons_div">
+				<img src="images/voteIcon.png" class="mainBodyIcons">
+			</div>
+			<div class="mainBodyIconsDetails">
+				<h3>Vote</h3>
+				<p>The main link for the voting processes. All election links are provided here. Users are also allowed the choice of voting by sorting through parties, candidates or constituencies.</p>
+			</div>
+		</div>
+		<div class="votingSection2Divs">
+			<div class="mainBodyIcons_div">
+				<img src="images/resultsIcon.png" class="mainBodyIcons">
+			</div>
+			<div class="mainBodyIconsDetails">
+				<h3>Results</h3>
+				<p>Allows all site users to view the results of all ongoing elections and previously conducted elections.</p>
+			</div>
+		</div>
+		<div class="votingSection2Divs">
+			<div class="mainBodyIcons_div">
+				<img src="images/contactIcon.png" class="mainBodyIcons">
+			</div>
+			<div class="mainBodyIconsDetails">
+				<h3>Contact Us</h3>
+				<p>Allows all site users the opportunity to reach INEC and its subsidiaries for any complaint or observation whatsoever.</p>
+			</div>
+		</div>
+		<div class="votingSection2Divs">
+			<div class="mainBodyIcons_div">
+				<img src="images/searchIcon.png" class="mainBodyIcons">
+			</div>
+			<div class="mainBodyIconsDetails">
+				<h3>Search</h3>
+				<p>Allows for a quick site survey for specific content within the site.</p>
+			</div>
+		</div>
+	</div>
+	<div id="eligibilitySection">
+		<h3 class="h3">ELIGIBILITY</h3>
+		<p>INEC and the federal Republic of Nigeria recognizes and emphasizes universal suffrage; the right to vote and be voted for. However; for ensuring a smooth election process that abides by universally acceptable global standards, the following rules apply;</p>
+		<p><span class="diams">&diams;</span> 	All site users wishing to participate actively in the election process must be dully certified Nigerians either by birth or naturalization. No persons seeking or staying on terms of asylum are eligible to vote.</p>
+		<p><span class="diams">&diams;</span> 	Age restrictions are 18 for voters, 25 for state house of assembly, 25 for house of representatives, 30 for the senate, 30 for gubernatorial and 35 for presidency. This is in line with Nigerian constitution sections 65, 106, 131 and 177 as at amended.</p>
+		<p><span class="diams">&diams;</span> 	All voters must possess the following identification documents, valid and current where applicable: passport photograph (12*12 inches), birth certificate and a National Identification Number (NIN).</p>
+		<p><span class="diams">&diams;</span> 	The above applies to all candidates vying for public portfolios. Valid party nomination and declaration documents must also be provisible.</p>
+ 		<p><span class="diams">&diams;</span> 	All registrations must be at INEC accredited offices. Fingerprints must be bold and similar. Illegible fingerprints may result to inability to vote. </p>
+	</div>
+	</div>
+	<div class="newsSection">
+		<div id="newsCaption">
+			<h4>News</h4>
+		</div>
+		<div id="newsDivs1st4">
+		<div class="newsDivs">
+			<div class="newsPhoto_div">
+				<img src="images/newsPhoto1.jpg" class="newsPhoto">
+			</div>
+			<div class="newsDetails">
+				<p><a>1 million voters turn-out in Kaduna</a></p>
+			</div>
+		</div>
+		<div class="newsDivs">
+			<div class="newsPhoto_div">
+				<img src="images/newsPhoto2.jpg" class="newsPhoto">
+			</div>
+			<div class="newsDetails">
+				<p><a>The Nigerian election paradox by Donald Trump</a></p>
+			</div>
+		</div>
+		<div class="newsDivs">
+			<div class="newsPhoto_div">
+				<img src="images/newsPhoto3.jpg" class="newsPhoto">
+			</div>
+			<div class="newsDetails">
+				<p><a>President Buhari meets Donald Trump over 2019 election polls</a></p>
+			</div>
+		</div>
+		<div class="newsDivs">
+			<div class="newsPhoto_div">
+				<img src="images/newsPhoto4.jpg" class="newsPhoto">
+			</div>
+			<div class="newsDetails">
+				<p><a>Nigerian Stock index falls ahead of 2019 elections</a></p>
+			</div>
+		</div>
+		</div>
+		<button onclick="moreNewsButtonFunction()" id="arrowButton">more news... <span id="darr">&darr;</span></button>
+		<div id="hidePhone">
+		<div class="newsDivs">
+			<div class="newsPhoto_div">
+				<img src="images/newsPhoto5.jpg" class="newsPhoto">
+			</div>
+			<div class="newsDetails">
+				<p><a>Nigerian students votes</a></p>
+			</div>
+		</div>
+		<div class="newsDivs">
+			<div class="newsPhoto_div">
+				<img src="images/newsPhoto6.jpg" class="newsPhoto">
+			</div>
+			<div class="newsDetails">
+				<p><a>Ekiti State election results</a></p>
+			</div>
+		</div>
+		<div class="newsDivs">
+			<div class="newsPhoto_div">
+				<img src="images/newsPhoto7.jpg" class="newsPhoto">
+			</div>
+			<div class="newsDetails">
+				<p><a>Presidential contestants signs peace agreement ahead of elections</a></p>
+			</div>
+		</div>
+		<div class="newsDivs">
+			<div class="newsPhoto_div">
+				<img src="images/newsPhoto8.jpg" class="newsPhoto">
+			</div>
+			<div class="newsDetails">
+				<p><a>2019 election time table</a></p>
+			</div>
+		</div>
+		</div>
+	<div id="disclaimer">
+		<blockquote><q>There is still a chance to salvage Nigeria; a chance to join the rest of the world in the uplit paths of economic and political exploits. The powers lie with you. Vote for the right person, do not sell your voice.</q></blockquote>
+	</div>
+	</div>
+		
+		<div id="footer">
+			<div id="footer_divsContainer1">
+				<div class="footer_divs1">
+					<h5>ELECTION</h5>
+					<a><p>How to Vote</p></a>
+					<a><p>Collation Centers</p></a>
+					<a><p>Collation Officers</p></a>
+					<a><p>Announcements</p></a>
+					<a><p>News</p></a>
+				</div>
+				<div class="footer_divs1">
+					<h5>RESULTS</h5>
+					<a><p>Presidential</p></a>
+					<a><p>Gubernatorial</p></a>
+					<a><p>Local Govt.</p></a>
+					<a><p>Senate</p></a>
+					<a><p>House of Reps</p></a>
+					<a><p>State HOA</p></a>
+				</div>
+				<div class="footer_divs1">
+					<h5>RESOURCES</h5>
+					<a><p>About INEC</p></a>
+					<a><p>INEC Publications</p></a>
+					<a><p>MAPS</p></a>
+					<a><p>Parties</p></a>
+					<a><p>Biographies</p></a>
+					<a><p>Manifestoes</p></a>
+				</div>
+				<div class="footer_divs1">
+					<h5>CONTACT US</h5>
+					<a><p>About Us</p></a>
+					<a><p>Local Maps</p></a>
+					<a><p>FAQS</p></a>
+					<a><p>Complaints</p></a>
+					<a><p>Hotlines</p></a>
+				</div>
+			</div>
+			<div id="footer_divContainer2">
+				<div class="footer_divs2">
+					<p>Follow us on</p>
+				</div>
+				<div  class="footer_divs2">
+					<p>&#169; 2019 e-INEC(official) Nigeria. All rights reserved.</p>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</body>
+    
+</html>

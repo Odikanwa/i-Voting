@@ -1,0 +1,525 @@
+body { 
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color:  #f1f1f1;
+	overflow-x: hidden;
+	background: url(images/nca.jpg);
+	background-blend-mode: lighten;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 300px;
+}
+
+#form{
+	width: 80%;
+	font-size: 18px;
+	margin: 80px 100px 40px 10%;
+	padding-top: 10px;
+	align-content: center;
+}
+.welcome_header{
+	background-color: #003300;
+	color: white;
+	font-size: 18px;
+	padding: 20px 8px 20px 8px;
+	text-align: center;
+	overflow: hidden;
+	position: fixed;
+	width: 98%;
+}
+#legend{
+	border: 10px solid #003300;
+	font-size: 25px;
+	padding: 5px;
+	text-transform: uppercase;
+	color: #003300;
+}
+.fieldset{
+	border: 2px solid #003300;
+	display: none;
+}
+footer{
+	color: black;
+	text-align: justify;
+}
+#prevBtn, #nextBtn:hover{
+  opacity: 0.8;
+}
+input.invalid{
+	border-color: red;
+}
+select.invalid {
+	border-color: red;
+}
+/*Small Mobile Device*/
+@media screen and (max-width: 399px){
+	body{
+		background-size: 220px;
+	}
+	.fieldset{
+		margin-top: 45px;
+	}
+	#header{
+		top: 0;
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+	.welcome_header{
+		top: 0;
+		font-size: 10px;
+		padding: 10px 5px 10px 5px;
+		text-transform: uppercase;
+		position: fixed;
+	}
+	#form{
+		font-size: 14px;
+		margin-top: 30px;
+		margin-left: 5%;
+	}
+	
+	/*progresss bar Div block*/
+	#progressBar_div{
+		width: 100%;
+		height: auto;
+		position: fixed;
+		background-color: white;
+		text-align: center;
+	}
+	/*progress bar*/
+	#progressBar{
+		margin-bottom: 10px;
+		overflow: hidden;
+		/*CSS counters to number the steps*/
+		counter-reset: step;
+		width: 70%;
+	}
+	#progressBar li {
+		list-style-type: none;
+		color: #003300;
+		text-transform: uppercase;
+		font-size: 0px;
+		width: 25%;
+		float: left;
+		position: relative;
+	}
+	#progressBar li:before {
+		content: counter(step);
+		counter-increment: step;
+		width: 22px;
+		line-height: 22px;
+		display: block;
+		font-size: 12px;
+		color: #ffffff;
+		background: #996600;
+		border-radius: 3px;
+		margin: 0 auto 5px auto;
+		text-align: center;
+	}
+	/*progressbar connectors*/
+	#progressBar li:after {
+		content: '';
+		width: 100%;
+		height: 2px;
+		background: #996600;
+		position: absolute;
+		left: -50%;
+		top: 9px;
+		z-index: -1; /*put it behind the numbers*/
+	}
+	#progressBar li:first-child:after {
+		/*connector not needed before the first step*/
+		content: none; 
+	}
+	/*marking active/completed steps green*/
+	/*The number of the step and the connector before it = green*/
+	#progressBar li.active:before, #progressBar li.active:after {
+		background: #003300;
+		color: white;
+	}
+	#legend{
+		border: 6px solid #003300;
+		font-size: 13px;
+		padding: 3px;
+		text-transform: uppercase;
+		color: #003300;
+}
+	.p_info{
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 20px;
+	}
+	.detail{
+		width: 80%;
+		height: auto;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+	.input{
+		width: 80%;
+		height: auto;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+	.input_tag{
+		width: 120%;
+		height: 100%;
+	}
+	#submit_div{
+		width: 100%;
+		height: auto;
+		margin-top: 10px;
+		padding-bottom: 20px;
+	}
+	#prevBtn{
+		display: inline-block;
+		float: left;
+		color: white;
+		background-color: #003300;
+		padding: 5px;
+		text-transform: uppercase;
+		font-size: 11px;
+	}
+	#nextBtn{
+		display: inline-block;
+		float: right;
+		color: white;
+		background-color: #003300;
+		padding: 5px;
+		text-transform: uppercase;
+		font-size: 11px;
+	}
+	footer{
+		font-size: 12px;
+		padding: 7px;
+	}
+}
+/*Tablet device*/
+@media screen and (min-width: 400px) and (max-width:750px){
+	#header{
+		top: 0;
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+	.fieldset{
+		margin-top: 80px;
+	}
+	.welcome_header{
+		top: 0;
+		font-size: 13px;
+		padding: 15px 8px 15px 8px;
+		text-transform: uppercase;
+		position: fixed;
+	}
+	#form{
+		font-size: 16px;
+		margin-top: 45px;
+		margin-left: 5%;
+	}
+	/*progress bar Div block*/
+	#progressBar_div{
+		width: 100%;
+		height: auto;
+		position: fixed;
+		background-color: white;
+		text-align: center;
+	}
+	/*progress bar*/
+	#progressBar{
+		margin-bottom: 30px;
+		overflow: hidden;
+		/*CSS counters to number the steps*/
+		counter-reset: step;
+		width: 85%;
+	}
+	#progressBar li {
+		list-style-type: none;
+		color: #003300;
+		text-transform: uppercase;
+		font-size: 10px;
+		width: 25%;
+		float: left;
+		position: relative;
+		
+	}
+	#progressBar li:before {
+		content: counter(step);
+		counter-increment: step;
+		width: 20px;
+		line-height: 20px;
+		display: block;
+		font-size: 10px;
+		color: #ffffff;
+		background: #996600;
+		border-radius: 3px;
+		margin: 0 auto 5px auto;
+		text-align: center;
+	}
+	/*progressbar connectors*/
+	#progressBar li:after {
+		content: '';
+		width: 100%;
+		height: 2px;
+		background: #996600;
+		position: absolute;
+		left: -50%;
+		top: 9px;
+		z-index: -1; /*put it behind the numbers*/
+	}
+	#progressBar li:first-child:after {
+		/*connector not needed before the first step*/
+		content: none; 
+	}
+	/*marking active/completed steps green*/
+	/*The number of the step and the connector before it = green*/
+	#progressBar li.active:before, #progressBar li.active:after {
+		background: #003300;
+		color: white;
+	}
+	#legend{
+		border: 6px solid #003300;
+		font-size: 16px;
+		padding: 5px;
+		text-transform: uppercase;
+		color: #003300;
+}
+	.p_info{
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-wrap: wrap;
+		padding: 5px;
+		margin-bottom: 10px;
+	}
+	.detail{
+		width: 35%;
+		height: auto;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		display: block;
+		padding-right: 10px;
+		margin-right: 10px;
+	}
+	.input{
+		width: 45%;
+		height: auto;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		display: block;
+	}
+	.input_tag{
+		width: 120%;
+		height: 100%;
+
+	}
+	#submit_div{
+		width: 100%;
+		height: auto;
+		margin-top: 12px;
+		padding-bottom: 30px;
+	}
+	#prevBtn{
+		display: inline-block;
+		float: left;
+		color: white;
+		background-color: #003300;
+		padding: 10px;
+		text-transform: uppercase;
+		font-size: 15px;
+	}
+	#nextBtn{
+		display: inline-block;
+		float: right;
+		color: white;
+		background-color: #003300;
+		padding: 10px;
+		text-transform: uppercase;
+		font-size: 15px;
+	}
+	footer{
+		font-size: 13px;
+		padding: 10px;
+	}
+}
+/*Desktop Device*/
+@media screen and (min-width: 751px) {
+	#header{
+		top: 0;
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+	.fieldset{
+		margin-top: 80px;
+	}
+	.welcome_header{
+		top: 0;
+		font-size: 15px;
+		padding: 15px 8px 15px 8px;
+		text-transform: uppercase;
+		position: fixed;
+	}
+	#form{
+		font-size: 16px;
+		margin-top: 45px;
+		margin-left: 10%;
+	}
+	/*progress bar Div block*/
+	#progressBar_div{
+		width: 100%;
+		height: auto;
+		position: fixed;
+		background-color: white;
+		text-align: center;
+	}
+	/*progress bar*/
+	#progressBar{
+		margin-bottom: 30px;
+		overflow: hidden;
+		/*CSS counters to number the steps*/
+		counter-reset: step;
+		width: 95%;
+	}
+	#progressBar li {
+		list-style-type: none;
+		color: #003300;
+		text-transform: uppercase;
+		font-size: 12px;
+		width: 25%;
+		float: left;
+		position: relative;
+	}
+	#progressBar li:before {
+		content: counter(step);
+		counter-increment: step;
+		width: 20px;
+		line-height: 20px;
+		display: block;
+		font-size: 12px;
+		color: #ffffff;
+		background: #996600;
+		border-radius: 3px;
+		margin: 0 auto 5px auto;
+		text-align: center;
+	}
+	/*progressbar connectors*/
+	#progressBar li:after {
+		content: '';
+		width: 100%;
+		height: 2px;
+		background: #996600;
+		position: absolute;
+		left: -50%;
+		top: 9px;
+		z-index: -1; /*put it behind the numbers*/
+	}
+	#progressBar li:first-child:after {
+		/*connector not needed before the first step*/
+		content: none; 
+	}
+	/*marking active/completed steps green*/
+	/*The number of the step and the connector before it = green*/
+	#progressBar li.active:before, #progressBar li.active:after {
+		background: #003300;
+		color: white;
+	}
+	#p_info_div{
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-wrap: wrap;
+		padding: 20px;
+	}
+	.p_info{
+		width: 48%;
+		height: auto;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		margin-bottom: 10px;
+	}
+	.detail{
+		width: 35%;
+		height: auto;
+		padding-top: 10px;
+		padding-bottom: 15px;
+		display: block;
+		padding-right: 10px;
+		margin-right: 10px;
+	}
+	.input{
+		width: 45%;
+		height: auto;
+		padding-top: 10px;
+		padding-bottom: 15px;
+		display: block;
+	}
+	.input_tag{
+		width: 120%;
+		height: 100%;
+	}
+	#submit_div{
+		width: 100%;
+		height: auto;
+		margin-top: 16px;
+		padding-bottom: 40px;
+	}
+	#prevBtn{
+		display: inline-block;
+		float: left;
+		color: white;
+		background-color: #003300;
+		padding: 15px;
+		text-transform: uppercase;
+		font-size: 18px;
+	}
+	#nextBtn{
+		display: inline-block;
+		float: right;
+		color: white;
+		background-color: #003300;
+		padding: 15px;
+		text-transform: uppercase;
+		font-size: 18px;
+	}
+	footer{
+		font-size: 18px;
+		padding: 12px;
+	}
+}
+
+
+
+/*general css continues*/
+.upload{
+	background-color: #003300;
+	color: white;
+}
+/* Pagination links */
+.pagination{
+	display: block;
+	width: 100%;
+	height: auto; 
+	margin-left: 10%;
+	margin-bottom: 100px;
+}
+.pagination a {
+	height: auto;
+	color: black;
+	float: left;
+	padding: 10px 15px;
+	text-decoration: none;
+	transition: background-color .3s;
+}
+
+/* Style the active/current link */
+.pagination a.active {
+	background-color: #003300;
+	color: white;
+}
+
+/* Add a grey background color on mouse-over */
+.pagination a:hover:not(.active) {background-color: #ddd;}

@@ -1,0 +1,2377 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Electronic Voting(voting)">
+    <meta name="keywords" content="Nigerian election, Vote Nigeria, evoting Nigeria">
+    <meta name="author" content="Odikanwa Michael, Ekwedike Patrick">
+    <meta charset="UTF-8">
+	<link rel="stylesheet" href="cssRegisteration_forms.css">
+	<script src="jsReg_forms.js" defer="true"></script>
+<title>Registeration section</title>
+<!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+<div id="header">
+    <div class="welcome_header">Welcome to the registeration page</div>
+    <!--- progress bar -->
+	<div id="progressBar_div">
+	<ul id="progressBar">
+		<li class="step">Personal information</li>
+		<li class="step">Educational background</li>
+		<li class="step">Supporting documents</li>
+		<li class="step">Biometric capture</li>
+	</ul>
+	</div>
+</div>
+<div id="form">
+	<form action="regSubmit.php" method="post" accept-charset="UTF-8" target="_self" enctype="multipart/form-data" id="regForm" >
+		<!--registeration_form1 fieldset-->
+      <fieldset class="fieldset">
+		  <!--
+    		<legend id="legend">Personal information:</legend>
+		  
+			<div id="p_info_div">
+				<div class="p_info">
+					
+					<div class="detail">
+						<label for="title"><b>Title:</b></label>
+					</div>
+    				<div class="input">
+  						<select name="title" class="input_tag" required onchange="this.className = ''" >
+							<option value="">select</option>
+  							<option value="Mr">Mr</option>
+  							<option value="Mrs">Mrs</option>
+  							<option value="miss">miss</option>
+						</select>
+					</div>
+				</div>
+    			<div class="p_info">
+					<div class="detail">
+						<label for="firstname"><b>First name:</b></label>
+					</div>
+    				<div class="input">
+						<input type="text" name="firstname" class="input_tag" maxlength="30" required onchange="this.className = ''">
+					</div>
+				</div>
+    			<div class="p_info">
+					<div class="detail">
+						<label for="middlename"><b>Middle name:</b></label>
+					</div>
+    				<div class="input">
+						<input type="text" name="middlename" class="input_tag" maxlength="30">
+					</div>
+				</div>
+				<div class="p_info">
+					<div class="detail">
+						<label for="lastname"><b>Last name:</b></label>
+					</div>
+					<div class="input">
+						<input type="text" name="lastname" class="input_tag" maxlength="30" required onchange="this.className = ''">
+					</div>
+				</div>
+				<div class="p_info">
+					<div class="detail">
+						<label for="dob"><b>Date of birth:</b></label>
+					</div>
+					<div class="input">
+						<input type="date" name="dob" class="input_tag" required onchange="this.className = ''">
+					</div>
+				</div>
+				<div class="p_info">
+					<div class="detail">
+						<label for="pob"><b>Place of Birth:</b></label>
+					</div>
+					<div class="input">
+						<input type="text" name="pob" class="input_tag" maxlength="50">
+					</div>
+				</div>
+				<div class="p_info">
+					<div class="detail">
+						<b>State of Origin:</b>
+					</div>
+					<div class="input">
+						<select  class="input_tag" name="soo" required onchange="this.className = ''">
+   				<option value="">select</option><option value="abia">Abia</option><option value="adamawa">Adamawa</option>
+   				<option value="akwa_ibom">Akwa Ibom</option><option value="anambra">Anambra</option><option value="bauchi">Bauchi</option>
+   				<option value="bayelsa">Bayelsa</option><option value="benue">Benue</option><option value="borno">Borno</option>
+   				<option value="cross_river">Cross River</option><option value="delta">Delta</option><option value="ebonyi">Ebonyi</option>
+				<option value="edo">Edo</option><option value="ekiti">Ekiti</option><option value="enugu">Enugu</option>
+				<option value="gombe">Gombe</option><option value="imo">Imo</option><option value="jigawa">Jigawa</option>
+				<option value="kaduna">Kaduna</option><option value="kano">Kano</option><option value="katsina">Katsina</option>
+				<option value="kebbi">Kebbi</option><option value="kogi">Kogi</option><option value="kwara">Kwara</option>
+				<option value="lagos">Lagos</option><option value="nassarawa">Nassarawa</option><option value="niger">Niger</option>
+				<option value="ogun">Ogun</option><option value="ondo">Ondo</option><option value="osun">Osun</option>
+				<option value="oyo">Oyo</option><option value="plateau">Plateau</option><option value="rivers">Rivers</option>
+				<option value="sokoto">Sokoto</option><option value="taraba">Taraba</option><option value="yobe">Yobe</option>
+				<option value="zamfara">Zamfara</option><option value="fct">FCT</option>
+   			</select>
+					</div>
+				</div>
+				<div class="p_info">
+					<div class="detail">
+						<label for="lga"><b>Local Govt of Origin:</b></label>
+					</div>
+					<div class="input">
+						<select class="input_tag" name="lga" required onchange="this.className = ''">
+				<option value="">select</option>
+				<span id="Abia">
+				<option value="aba_north">Aba North</option><option value="aba_south">Aba South</option>
+				<option value="arochukwu">Arochukwu</option><option value="bende">Bende</option><option value="">Isiala Ngwa South</option>
+				<option value="ikwuano">Ikwuano</option><option value="isiala">Isiala</option><option value="ngwa_north">Ngwa North</option>
+				<option value="isikwuato">Isikwuato</option><option value="ukwa_west">Ukwa West</option><option value="ukwa_east">Ukwa East</option>
+				<option value="umuahia">Umuhia</option><option value="umuahia_south">Umuahia South</option>
+				</span>
+				<span id="Adamawa">
+				<option value="demsa">Demsa</option><option value="fufore">Fufore</option><option value="ganye">Ganye</option>
+				<option value="yola_north">yola North</option><option value="lamurde">Lamurde</option><option value="madagali">Madagali</option>
+				<option value="maiha">Maiha</option><option value="mayo_belwa">Mayo Belwa</option><option value="muchika">Muchika</option>
+				<option value="mubi_south">Mubi South</option><option value="numna">Numna</option><option value="shelleng">Shelleng</option>
+				<option value="song">Song</option><option value="toungo">Toungo</option><option value="jimeta">Jimeta</option>
+				<option value="yola_south">Yola South</option><option value="hung">Hung</option>
+				</span>
+				
+				<span Akwa_Ibom>
+				<option value="abak">Abak</option><option value="eastern_obolo">Eastern Obolo</option><option value="eket">Eket</option>
+				<option value="essien_udim">Essien Udim</option><option value="etimekpo">Etimekpo</option><option value="etinam">Etinan</option>
+				<option value="ibeno">Ibeno</option><option value="ibesikpo_asutan">Ibesikpo Asutan</option><option value="Ibiono_ibom">Ibiono Ibom</option>
+				<option value="ika">Ika</option><option value="ikono">Ikono</option><option value="ikot_abasi">Ikot Abasi</option>
+				<option value="ikot_ekpene">Ikot Ekpene</option><option value="ini">Ini</option><option value="itu">Itu</option>
+				<option value="mbo">Mbo</option><option value="mkpat_enin">Mkpat Enin</option><option value="nsit_ibom">Nsit Ibom</option>
+				<option value="nsit_ubium">Nsit Ubium</option><option value="obot_akara">Obot Akara</option><option value="okobo">Okobo</option>
+				<option value="onna">Onna</option><option value="orukanam">Orukanam</option><option value="oron">Oron</option>
+				<option value="udong-uko">Udong Uko</option><option value="ukanafun">Ukanafun</option><option value="esit_eket">Esit Eket</option>
+				<option value="uruan">Uruan</option><option value="urue_offoung">Urue Offoung</option><option value="oruko_ete">Oruko Ete</option>
+				<option value="uyo">Uyo</option>
+				</span>
+				
+				<span id="Anambra">
+				<option value="aguata">Aguata</option><option value="anambra">Anambra</option><option value="anambra_west">Anambra West</option>
+				<option value="anaocha">Anaocha</option><option value="awka_south">Awka South</option><option value="awka_north">Awka North</option>
+				<option value="ogbaru">Ogbaru</option><option value="onitsha_south">Onitsha South</option><option value="onitsha_north">Onitsha North</option>
+				<option value="orumba_north">Orumba North</option><option value="orumba_south">Orumba South</option><option value="oyi">Oyi</option>
+				</span>
+				
+				<span id="Bauchi">
+				<option value="alkaleri">Alkaleri</option><option value="bauchi">Bauchi</option><option value="bogoro">Bogoro</option>
+				<option value="daraza">Darazo</option><option value="dass">Dass</option><option value="gamawa">Gamawa</option>
+				<option value="ganjuwa">Ganjuwa</option><option value="giade">Giade</option><option value="jamaare">jama'are</option>
+				<option value="katagum">Katagum</option><option value="kirfi">Kirfi</option><option value="misau">Misau</option>
+				<option value="ninji">Ninji</option><option value="hira">Hira</option><option value="tafawa_balewa">Tafawa Balewa</option>
+				<option value="itas_gadau">Itas Gadau</option><option value="toro">Toro</option><option value="warji">Warji</option>
+				<option value="zaki">Zaki</option><option value="dambam">Dambam</option>
+				</span>
+				
+				<span id="Bayelsa">
+				<option value="brass">Brass</option><option value="ekeremor">Ekeremor</option><option value="kolok_opokuma">Kolok/Opokuma</option>
+				<option value="nembe">Nembe</option><option value="ogbia">Ogbia</option><option value="sagbama">Sagbama</option>
+				<option value="southern_ijaw">Southern ijaw</option><option value="yenagoa">Yenogoa</option><option value="membe">Membe</option>
+				</span>
+				
+				<span id="Benue">
+				<option value="ador">Ador</option><option value="agatu">Agatu</option><option value="apa">Apa</option>
+				<option value="buruku">Buruku</option><option value="gboko">Gboko</option><option value="guma">Guma</option>
+				<option value="gwer_east">Gwer East</option><option value="gwer_west">Gwer West</option><option value="kastina">kastina</option>
+				<option value="ala">Ala</option><option value="konshisha">Konshisha</option><option value="kwande">Kwande</option>
+				<option value="logo">Logo</option><option value="makurdii">Makurdii</option><option value="obi">Obi</option>
+				<option value="ogbadibo">Ogbadibo</option><option value="ohimini">Ohimini</option><option value="oju">Oju</option>
+				<option value="okpokwu">Okpokwu</option><option value="oturkpo">Oturkpo</option><option value="tarka">Tarka</option>
+				<option value="ukum">Ukum</option><option value="vandekya">vandekya</option>
+				</span>
+				
+				<span id="Borno">
+				<option value="abadan">Abadan</option><option value="askira_uba">Askira/Uba</option><option value="bama">Bama</option>
+				<option value="bayo">Bayo</option><option value="biu">Biu</option><option value="chibok">Chibok</option>
+				<option value="damboa">Damboa</option><option value="dikwagubio">Dikwagubio</option><option value="guzamala">Guzamala</option>
+				<option value="gwoza">Gwoza</option><option value="hawul">Hawul</option><option value="jere">Jere</option>
+				<option value="kaga">Kaga</option><option value="kalka_balge">Kalka/Balge</option><option value="konduwa">Konduwa</option>
+				<option value="kugawa">Kugawa</option><option value="kwayaku">Kwayaku</option><option value="mafa">Mafa</option>
+				<option value="magumeri">Magumeri</option><option value="maiduguri">Maiduguri</option><option value="marte">Marte</option>
+				<option value="mobbar">Mobbar</option><option value="mongumo">Monguno</option><option value="ngala">Ngala</option>
+				<option value="nganzai">Nganzai</option><option value="shani">shani</option>
+				</span>
+				
+				<span id="Cross_River">
+				<option value="abia">Abia</option><option value="akampa">Akampa</option><option value="akpabuyo">Akpabuyo</option>
+				<option value="bakassi">Bakassi</option><option value="bekwara">Bekwara</option><option value="biase">Biase</option>
+				<option value="boki">Boki</option><option value="calabar_south">Calabar South</option><option value="etung">Etung</option>
+				<option value="ikom">Ikom</option><option value="obanliku">Obanliku</option><option value="obubra">Obubra</option>
+				<option value="obudu">Obudu</option><option value="odukpani">Odukpani</option><option value="ogoja">Ogoja</option>
+				<option value="ugeb_north">Ugeb North</option><option value="yala">Yala</option><option value="yarkur">Yarkur</option>
+				</span>
+				
+				<span id="Delta">
+				<option value="aniocha_south">Aniocha South</option><option value="anioha">Anioha</option><option value="bormadi">Bormadi</option>
+				<option value="burutu">Burutu</option><option value="ethiope_west">Ethiope West</option><option value="ethiope_east">Ethiope East</option>
+				<option value="ika_south">Ika South</option><option value="ika_north_east">Ika North-East</option><option value="isoko">Isoko South</option>
+				<option value="isoko_north">Isoko North</option><option value="ndokwa-east">Ndokwa East</option><option value="ndokwa_west">Ndokwa West</option>
+				<option value="okpe">Okpe</option><option value="oshimili_north">Oshimili North</option><option value="oshimili_south">Oshimili South</option>
+				<option value="patani">Patani</option><option value="sapelle">Sapelle</option><option value="udu">Udu</option>
+				<option value="ughelli_south">Ughelli South</option><option value="ughelli_north">Ughelli North</option><option value="ukwuani">Ukwuani</option>
+				<option value="uviwie">Uviwie</option><option value="warri_central">Warri Central</option><option value="warri_north">Warri north</option>
+				<option value="warri_south">Warri South</option>
+				</span>
+				
+				<span id="Ebonyi">
+				<option value="abakaliki">Abakaliki</option><option value="afikpo_south">Afikpo South</option><option value="afikpo_north">Afikpo North</option>
+				<option value="ebonyi">Ebonyi</option><option value="ezza">Ezza</option><option value="ezza_south">Ezza South</option>
+				<option value="ikwo">Ikwo</option><option value="ishiellu">Ishiellu</option><option value="ivo">Ivo</option>
+				<option value="ahaozara">Ahaozara</option><option value="ohaukwu">Ohaukwu</option><option value="onicha">Onicha</option>
+				<option value="izzi">Izzi</option>
+				</span>
+				
+				<span id="Edo">
+				<option value="akoko_edo">Akoko Edo</option><option value="egor">Egor</option><option value="esan_east">Esan East</option>
+				<option value="esan_south_east">Esan South-East</option><option value="esan_central">Esan Central</option><option value="esan_west">Esan West</option>
+				<option value="etsako">Etsako</option><option value="etsako_central">Etsako Central</option><option value="etsako_east">Etsako East</option>
+				<option value="orhionwon">Orhionwon</option><option value="ovia_north">Ovia North</option><option value="ovia_south_west">Ovia South-West</option>
+				<option value="owan_west">Owan West</option><option value="owan_south">Owan South</option><option value="uhunwonode">Uhunwonde</option>
+				</span>
+				
+				<span id="Ekiti">
+				<option value="ado_ekiti">Ado Ekiti</option><option value="effon_alaiye">Effon Alaiye</option><option value="ekiti_south">Ekiti South West</option>
+				<option value="ekiti_west">Ekiti West</option><option value="ekiti_east">Ekiti East</option><option value="emure_isse">Emure/ise</option>
+				<option value="orun">Orun</option><option value="ido">Ido</option><option value="osi">Osi</option>
+				<option value="ijero">Ijero</option><option value="ikere">Ikere</option><option value="ikole">Ikole</option>
+				<option value="ilemeje">Ilejemeje</option><option value="irepodun">Irepodun</option><option value="ise_orun">Ise/Orun</option>
+				<option value="moba">Moba</option><option value="oye">Oye</option><option value="aiyekere">Aiyekere</option>
+				</span>
+				
+				<span id="Enugu">
+				<option value="awgu">Awgu</option><option value="aninri">Aninri</option><option value="enugu_east">Enugu East</option>
+				<option value="enugu_north">Enugu North</option><option value="enugu_south">Enugu South</option><option value="ezeagu">Ezeagu</option>
+				<option value="igbo_eze">Igbo-Eze North</option><option value="igbi_etiti">Igbi Etiti</option>
+				<option value="nsukka">Nsukka</option><option value="oji_river">Oji River</option><option value="undenu">Undenu</option>
+				<option value="uzo_uwani">Uzo Uwani</option><option value="udi">Udi</option>
+				</span>
+				
+				<span id="Gombe">
+				<option value="akko">Akko</option><option value="balanga">Balanga</option><option value="billiri">Billiri</option>
+				<option value="dukku">Dukku</option><option value="dunakaye">Dunakaye</option><option value="gombe">Gombe</option>
+				<option value="kaltungo">Kaltungo</option><option value="kwami">Kwami</option><option value="nafada_bajoga">Nafada/Bajoga</option>
+				<option value="shomgom">Shomgom</option><option value="yamaltu">Yamaltu/Deba</option>
+				</span>
+				
+				<span id="Imo">
+				<option value="aboh_mbaise">Aboh-Mbaise</option><option value="ahiazu_mbaise">Ahiazu-Mbaise</option><option value="ehime_mbano">Ehime-Mbano</option>
+				<option value="ezinhite">Ezinhite</option><option value="ideato_north">Ideato North</option><option value="ideato_south">Ideato South</option>
+				<option value="ihitte_uboma">Ihitte/Uboma</option><option value="ikeduru">Ikeduru</option><option value="isiala">Isiala</option>
+				<option value="isu">Isu</option><option value="mbaitolu">Mbaitolu</option><option value="ngor_okpala">Ngor okpala</option>
+				<option value="njaba">Njaba</option><option value="nwangele">Nwangele</option><option value="nkwere">Nkwere</option>
+				<option value="obowo">Obowo</option><option value="aguta">Aguta</option><option value="ohaji_egbema">Ohaji-Egbema</option>
+				<option value="okigwe">Okigwe</option><option value="onuimo">Onuimo</option><option value="orlu">Orlu</option>
+				<option value="orsu">Orsu</option><option value="oru">Oru</option><option value="oru_west">Oru West</option>
+				<option value="owerri">Owerri</option><option value="owerri_north">Owerri North</option><option value="owerri_south">Owerri South</option>
+				</span>
+			
+				<span id="Jigawa">
+				<option value="auyo">Auyo</option><option value="babura">Babura</option><option value="birnin_kudu">Birni Kudu</option>
+				<option value="biriniwa">Biriniwa</option><option value="buji">Buji</option><option value="dutse">Dutse</option>
+				<option value="gagarawa">Gagarawa</option><option value="garki">Garki</option><option value="gumel">Gumel</option>
+				<option value="guri">Guri</option><option value="gwaram">Gwaram</option><option value="gwiwa">Gwiwa</option>
+				<option value="hadejia">Hadejia</option><option value="jahun">Jahun</option><option value="kafin_hausa">Kafin Hausa</option>
+				<option value="kauguma_kazaure">Kaugama Kazaure</option><option value="kiri_kasamma">Kiri Kasamma</option><option value="kiyawa">Kiyawa</option>
+				<option value="maigatari">Maigatari</option><option value="malam_madori">Malam Madori</option><option value="miga">Miga</option>
+				<option value="ringim">Ringim</option><option value="roni">Roni</option><option value="sule_tankarbar">Sule-Tankarkar</option>
+				<option value="taura">Taura</option><option value="yankwashi">Yankwashi</option>
+				</span>
+				
+				<span id="Kaduna">
+				<option value="birni_gwari">Birni-Gwari</option><option value="chikun">Chikun</option><option value="giwa">Giwa</option>
+				<option value="igabi">Igabi</option><option value="ikara">Ikara</option><option value="jaba">Jaba</option>
+				<option value="jemaa">Jema'a</option><option value="kachia">Kachia</option><option value="kaduna_north">Kaduna North</option>
+				<option value="kaduna_south">Kaduna South</option><option value="kagarko">Kagarko</option><option value="kajuru">Kajuru</option>
+				<option value="kaura">Kaura</option><option value="kauru">Kauru</option><option value="kubau">Kubau</option>
+				<option value="kudan">Kudan</option><option value="lere">Lere</option><option value="makarfi">Makarfi</option>
+				<option value="sabon_gari">Sabon-Gari</option><option value="sanga">Sanga</option><option value="soba">Soba</option>
+				<option value="zango_kataf">Zango-Kataf</option><option value="zaria">Zaria</option>
+				</span>
+				
+				<span id="Kano">
+				<option value="ajinji">Ajingi</option><option value="albasu">Albasu</option><option value="bagwai">Bagwai</option>
+				<option value="bebeji">Bebeji</option><option value="bichi">Bichi</option><option value="bunkure">Bunkure</option>
+				<option value="dala">Dala</option><option value="dambatta">Dambatta</option><option value="dawakin_kudu">Dawakin Kudu</option>
+				<option value="dawakin_tofa">Dawakin Tofa</option><option value="doguwa">Doguwa</option><option value="fagge">Fagge</option>
+				<option value="gabasawa">Gabasawa</option><option value="garko">Garko</option><option value="garum">Garum</option>
+				<option value="mallam">Mallam</option><option value="gaya">Gaya</option><option value="gezawa">Gezawa</option>
+				<option value="gwale">Gwale</option><option value="gwarzo">Gwarzo</option><option value="kabo">Kabo</option>
+				<option value="kano_municipal">Kano Municipal</option><option value="karaye">Karaye</option><option value="kibiya">Kibiya</option>
+				<option value="kiru">Kiru</option><option value="kumbotso">Kumbotso</option><option value="kunchi">Kunchi</option>
+				<option value="kura">Kura</option><option value="madobi">Madobi</option><option value="makoba">Makoba</option>
+				<option value="minjibir">Minjibir</option><option value="nasarawa">Nasarawa</option><option value="rano">Rano</option>
+				<option value="rimin_gado">Rimin Gado</option><option value="rogo">Rogo</option><option value="shanomo">Shanomo</option>
+				<option value="sumaila">Sumaila</option><option value="takali">Takali</option><option value="tarauni">Tarauni</option>
+				<option value="tofa">Tofa</option><option value="tsanyawa">Tsanyawa</option><option value="tudun_wada">Tudun Wada</option>
+				<option value="ungogo">Ungogo</option><option value="wudil">Wudil</option>
+				</span>
+				
+				
+				<span id="Katsina">
+				<option value="bakori">Bakori</option><option value="batagarawa">Batagarawa</option><option value="batsari">Batsari</option>
+				<option value="baure">Baure</option><option value="bindawa">Bindawa</option><option value="charanchi">Charanchi</option>
+				<option value="danduwe">Danduwe</option><option value="danja">Danja</option><option value="dan_musa">Dan Musa</option>
+				<option value="daura">Daura</option><option value="dutsi">Dutsi</option><option value="dutsin_ma">Dutsin-Ma</option>
+				<option value="faskari">Faskari</option><option value="funtua">Funtua</option><option value="ingawa">Ingawa</option>
+				<option value="jibia">Jibia</option><option value="kafur">Kafur</option><option value="kaita">Kaita</option>
+				<option value="kankara">Kankara</option><option value="kankia">kankia</option><option value="katsina">Katsina</option>
+				<option value="kurfi">Kurfi</option><option value="kusada">Kusada</option><option value="maiadua">Mai'Adua</option>
+				<option value="malumfashi">Malumfashi</option><option value="mani">Mani</option><option value="mashi">Mashi</option>
+				<option value="matazuu">Matazuu</option><option value="musawa">Musawa</option><option value="rimi">Rimi</option>
+				<option value="sabuwa">Sabuwa</option><option value="safana">Safana</option><option value="sandamu">Sandamu</option>
+				<option value="zango">Zango</option>
+				</span>
+				
+				<span id="Kebbi">
+				<option value="aleiro">Aleiro</option><option value="arewa_dandi">Arewa-Dandi</option><option value="argungu">Argungu</option>
+				<option value="augie">Augie</option><option value="bagudo">Bagudo</option><option value="birnin_kebbi">Birnin Kebbi</option>
+				<option value="bunza">Bunza</option><option value="dandi">Dandi</option><option value="fakai">Fakai</option>
+				<option value="gwandu">Gwandu</option><option value="jega">Jega</option><option value="kalgo">Kalgo</option>
+				<option value="koko_besse">Koko/Besse</option><option value="maiyama">Maiyama</option><option value="ngaski">Ngaski</option>
+				<option value="sakaba">Sakaba</option><option value="shanga">Shanga</option><option value="suru">Suru</option>
+				<option value="wasagu_danko">Wasagu/Danko</option><option value="yauri">Yauri</option><option value="zuru">Zuru</option>
+				</span>
+
+				<span id="Kogi">
+				<option value="adavi">Adavi</option><option value="ajaokuta">Ajaokuta</option><option value="ankpa">Ankpa</option>
+				<option value="bassa">Bassa</option><option value="dekina">Dekina</option><option value="ibaji">Ibaji</option>
+				<option value="idah">Idah</option><option value="igalamela_odolu">Igalamela-Odolu</option><option value="ijumu">Ijumu</option>
+				<option value="kabba_bunu">Kabba/Bunu</option><option value="kogi">Kogi</option><option value="lokoja">Lokoja </option>
+				<option value="mopa_muro">Mopa-Muro</option><option value="ofu">Ofu</option><option value="ogori_mangongo">Ogori/Mangongo</option>
+				<option value="okehi">Okehi</option><option value="okene">Okene</option><option value="olamabolo">Olamabolo</option>
+				<option value="omala">Omala</option><option value="yagba_east">Yagba East</option><option value="yagba_west">Yagba West</option>
+				</span>
+ 
+				<span id="Kwara">
+				<option value="asa">Asa</option><option value="baruten">Baruten</option><option value="edu">Edu</option>
+				<option value="ekiti">Ekiti</option><option value="ifelodun">Ifelodun</option><option value="ilorin_east">Ilorin East</option>
+				<option value="ilorin_west">Ilorin West</option><option value="irepodun">Irepodun</option><option value="isin">Isin</option>
+				<option value="kaiama">Kaiama</option><option value="moro">Moro</option><option value="offa">Offa</option>
+				<option value="oke_ero">Oke-Ero</option><option value="oyun">Oyun</option><option value="pategi">Pategi</option>
+				</span>
+				
+				<span id="Lagos">
+				<option value="agege">Agege</option><option value="ajeromi_ifelodun">Ajeromi-Ifelodun</option><option value="alimosho">Alimosho</option>
+				<option value="amuwo_odofin">Amuwo-Odofin</option><option value="apapa">Apapa</option><option value="badagry">Badagry</option>
+				<option value="epe">Epe</option><option value="eti_osa">Eti-Osa</option><option value="ibeju_lekki">Ibeju/Lekki</option>
+				<option value="ifako_ijaye">Ifako-Ijaye</option><option value="ikeja">Ikeja</option><option value="ikorodu">Ikorodu</option>
+				<option value="kosofe">Kosofe</option><option value="lagos_island">Lagos Island</option><option value="lagos_mainland">Lagos Mainland</option>
+				<option value="mushin">Mushin</option><option value="ojo">Ojo</option><option value="oshodi_isolo">Oshodi-Isolo</option>
+				<option value="shomolu">Shomolu</option><option value="surulere">Surulere</option>
+				</span>
+				
+				<span id="Nasarawa">
+				<option value="akwanga">Akwanga</option><option value="awe">Awe</option><option value="doma">Doma</option>
+				<option value="karu">Karu</option><option value="keana">Keana</option><option value="keffi">Keffi</option>
+				<option value="kokona">Kokona</option><option value="lafia">Lafia</option><option value="nasarawa">Nasarawa</option>
+				<option value="nasarawa_eggon">Nasarawa-Eggon</option><option value="obi">Obi</option><option value="toto">Toto</option>
+				<option value="wamba">Wamba</option>
+				</span>
+
+				<span id="Niger">
+				<option value="agwara">Agwara</option><option value="bida">Bida</option><option value="borgu">Borgu</option>
+				<option value="bosso">Bosso</option><option value="chanchaga">Chanchaga</option><option value="edati">Edati</option>
+				<option value="gbako">Gbako</option><option value="katcha">Katcha</option><option value="kontagora">Kontagora</option>
+				<option value="lapai">Lapai</option><option value="lavun">Lavun</option><option value="magama">Magama</option>
+				<option value="mariga">Mariga</option><option value="mashegu">Mashegu</option><option value="mokwa">Mokwa</option>
+				<option value="muya">Muya</option><option value="pailoro">Pailoro</option><option value="rafi">Rafi</option>
+				<option value="rijau">Rijau </option><option value="shiroro">Shiroro</option><option value="suleja">Suleja</option>
+				<option value="tafa">Tafa</option><option value="wushishi">Wushishi</option>
+				</span>
+				 
+
+				<span id="Ogun">
+				<option value="abeokuta_north">Abeokuta North</option><option value="abeokuta_south">Abeokuta South</option><option value="ado_oto_ota">Ado-Odo/Ota</option>
+				<option value="egbado_north">Egbado North</option><option value="">Egbado South</option><option value="ewekoro">Ewekoro</option>
+				<option value="ifo">Ifo</option><option value="">Ijebu East</option><option value="ijebu_north">Ijebu North</option>
+				<option value="ijebu_north_east">Ijebu North East</option><option value="ijebu_ode">Ijebu Ode</option><option value="">Ikenne</option>
+				<option value="imeko_afon">Imeko-Afon</option><option value="ipokia">Ipokia</option><option value="obafemi_owode">Obafemi-Owode</option>
+				<option value="ogun_waterside">Ogun Waterside</option><option value="odeda">Odeda</option><option value="odogbolu">Odogbolu</option>
+				<option value="remo_north">Remo North</option><option value="shagamu">Shagamu</option>
+				</span>
+				
+				<span id="Ondo">
+				<option value="akoko_north_east">Akoko North East</option><option value="akoko_north_west">Akoko North West</option><option value="akoko_south">Akoko South</option>
+				<option value="akure_east">Akure East</option><option value="akoko_south_west">Akoko South West</option><option value="akure_north">Akure North</option>
+				<option value="akure_south">Akure South</option><option value="ese_odo">Ese-Odo</option><option value="idanre">Idanre</option>
+				<option value="fedore">Ifedore</option><option value="ilaje">Ilaje</option><option value="ile_oluji">Ile-Oluji</option>
+				<option value="okeigbo">Okeigbo</option><option value="irele">Irele</option><option value="odigbo">Odigbo</option>
+				<option value="okitipupa">Okitipupa</option><option value="ondo_east">Ondo East</option><option value="ondo_west">Ondo West</option>
+				<option value="ose">Ose</option><option value="owo">Owo</option>
+				</span>
+				
+				<span id="Osun">
+				<option value="aiyedade">Aiyedade</option><option value="aiyedire">Aiyedire</option><option value="atakumosa East">Atakumosa East</option>
+				<option value="atakumosa_west">Atakumosa West</option><option value="boluwaduro">Boluwaduro</option><option value="boripe">Boripe</option>
+				<option value="ede_north">Ede North</option><option value="ede_south">Ede South</option><option value="egbedore">Egbedore</option>
+				<option value="ejigbo">Ejigbo</option><option value="ife_central">Ife Central</option><option value="ife_east">Ife East</option>
+				<option value="ife_north">Ife North</option><option value="ife_south">Ife South</option><option value="ifedayo">Ifedayo </option>
+				<option value="ifelodun">Ifelodun</option><option value="ila">Ila</option><option value="ilesha_east">Ilesha East</option>
+				<option value="ilesha_west">Ilesha West</option><option value="irepodun">Irepodun</option>
+				<option value="irewole">Irewole</option><option value="isokan">Isokan</option><option value="iwo">Iwo</option>
+				<option value="obokun">Obokun</option><option value="odo_otin">Odo-Otin</option><option value="ola_oluwa">Ola-Oluwa</option>
+				<option value="olorunda">Olorunda</option><option value="oriade">Oriade</option><option value="orolu">Orolu</option>
+				<option value="osogbo">Osogbo</option>
+				</span>
+				
+				<span id="Oyo">
+				<option value="afijio">Afijio</option><option value="akinyele">Akinyele</option><option value="atiba">Atiba</option>
+				<option value="atigbo">Atigbo</option><option value="egbeda">Egbeda</option><option value="ibadan_central">Ibadan Central</option>
+				<option value="ibadan_north">Ibadan North</option><option value="ibadan_north_west">Ibadan North West</option><option value="ibadan south_east">Ibadan South East</option>
+				<option value="ibadan_south_west">Ibadan South West</option><option value="ibarapa_central">Ibarapa Central</option><option value="ibarapa_east">Ibarapa East</option>
+				<option value="ibarapa_north">Ibarapa North</option><option value="ido">Ido</option><option value="irepo">Irepo</option>
+				<option value="iseyin">Iseyin</option><option value="itesiwaju">Itesiwaju</option><option value="iwajowa">Iwajowa</option>
+				<option value="kajola ">Kajola </option><option value="lagelu">Lagelu</option><option value="ogbmosho_north">Ogbmosho North</option>
+				<option value="ogbmosho_south">Ogbmosho South</option><option value="ogo_oluwa">Ogo Oluwa</option><option value="olorunsogo">Olorunsogo</option>
+				<option value="oluyole">Oluyole</option><option value="ona_ara">Ona-Ara</option><option value="orelope">Orelope</option>
+				<option value="ori_ire">Ori Ire</option><option value="oyo_east">Oyo East</option><option value="oyo_west">Oyo West</option>
+				<option value="saki_east">Saki East</option><option value="saki_west">Saki West</option><option value="surulere">Surulere</option>
+				</span>
+				
+				
+				<span id="Plateau">
+				<option value="barikin_ladi">Barikin Ladi</option><option value="bassa">Bassa</option><option value="bokkos">Bokkos</option>
+				<option value="jos_east">Jos East</option><option value="jos_north">Jos North</option><option value="jos_south">Jos South</option>
+				<option value="kanam">Kanam</option><option value="kanke">Kanke</option><option value="langtang_North">Langtang North</option>
+				<option value="langtang_south">Langtang South</option><option value="mangu">Mangu</option><option value="mikang">Mikang</option>
+				<option value="pankshin">Pankshin</option><option value="quaan_pan">Qua'an Pan</option><option value="riyom">Riyom</option>
+				<option value="shendam">Shendam</option><option value="wase">Wase</option>
+				</span>
+
+				<span id="Rivers">
+				<option value="abua_odual">Abua/Odual</option><option value="ahoada_east">Ahoada East</option><option value="ahoada_west">Ahoada West</option>
+				<option value="akuku_toru">Akuku Toru</option><option value="andoni">Andoni</option><option value="asari_toru">Asari-Toru</option>
+				<option value="bonny ">Bonny</option><option value="degema">Degema</option><option value="emohua">Emohua</option>
+				<option value="eleme">Eleme</option><option value="etche">Etche</option><option value="gokana">Gokana</option>
+				<option value="ikwerre">Ikwerre</option><option value="khana">Khana</option><option value="obia_akpor">Obia/Akpor</option>
+				<option value="ogba_egbema_ndoni">Ogba/Egbema/Ndoni</option><option value="ogu_bolo">ogu/Bolo</option><option value="okrika">Okrika</option>
+				<option value="omumma">Omumma</option><option value="opobo_nkoro">Opobo/Nkoro</option><option value="oyigbo">Oyigbo</option>
+				<option value="port_harcourt">Port-Harcourt</option><option value="tai">Tai</option>
+				</span>
+				
+				 
+
+				<span id="Sokoto">
+				<option value="binji">Binji</option><option value="bodinga">Bodinga</option><option value="dange_shnsi">Dange-shnsi</option>
+				<option value="gada">Gada</option><option value="goronyo">Goronyo</option><option value="gudu">Gudu</option>
+				<option value="gawabawa">Gawabawa</option><option value="illela">Illela</option><option value="isa">Isa</option>
+				<option value="kware">Kware</option><option value="kebbe">kebbe</option><option value="rabah">Rabah</option>
+				<option value="sabon_birni">Sabon birni</option><option value="shagari">Shagari</option><option value="silame">Silame</option>
+				<option value="sokoto_north">Sokoto North</option><option value="sokoto_south">Sokoto South</option><option value="tambuwal">Tambuwal</option>
+				<option value="tqngaza">Tqngaza</option><option value="tureta">Tureta</option><option value="wamako">Wamako</option>
+				<option value="wurno">Wurno</option><option value="yabo">Yabo</option>
+				</span>
+				
+				<span id="Taraba">
+				<option value="ardo_kola">Ardo-kola</option><option value="bali">Bali</option><option value="donga">Donga</option>
+				<option value="gashaka">Gashaka</option><option value="cassol">Cassol</option><option value="ibi">Ibi</option>
+				<option value="jalingo">Jalingo</option><option value="karin_Lamido ">Karin-Lamido</option><option value="kurmi">Kurmi</option>
+				<option value="lau">Lau</option><option value="sardauna">Sardauna</option><option value="takum">Takum</option>
+				<option value="ussa">Ussa</option><option value="wukari">Wukari</option><option value="yorro">Yorro</option>
+				<option value="zing">Zing</option>
+				</span>
+
+				<span id="Yobe">
+				<option value="bade">Bade</option><option value="bursari">Bursari</option><option value="damaturu">Damaturu</option>
+				<option value="fika">Fika</option><option value="fune">Fune</option><option value="geidam">Geidam</option>
+				<option value="gujba">Gujba</option><option value="gulani">Gulani</option><option value="jakusko">Jakusko</option>
+				<option value="karasuwa">Karasuwa</option><option value="karawa">Karawa</option><option value="machina">Machina</option>
+				<option value="nangere">Nangere</option><option value="nguru_potiskum">Nguru Potiskum</option><option value="tarmua">Tarmua</option>
+				<option value="yunusari">Yunusari</option><option value="yusufari">Yusufari</option>
+				</span>
+				
+				<span id="Zamfara">
+				<option value="anka">Anka</option><option value="bakura">Bakura</option><option value="birnin_magaji">Birnin Magaji</option>
+				<option value="bukkuyum">Bukkuyum</option><option value="bungudu">Bungudu</option><option value="gummi">Gummi</option>
+				<option value="gusau">Gusau</option><option value="kaura">Kaura</option><option value="namoda">Namoda</option>
+				<option value="maradun">Maradun</option><option value="maru">Maru</option><option value="shinkafi">Shinkafi</option>
+				<option value="talata_mafara">Talata Mafara</option><option value="tsafe">Tsafe</option><option value="zurmi">Zurmi</option>
+				</span>
+				
+				<span id="FCT">
+				<option value="gwagwalada">Gwagwalada</option><option value="kuje">kuje</option><option value="abaji">Abaji</option>
+				<option value="abuja_municipal">Abuja Municipal</option><option value="bwari">Bwari</option><option value="kwali">Kwali</option>
+				</span>
+				
+			</select>
+					</div>
+				</div>
+				<div class="p_info">
+					<div class="detail">
+						<label for="res_address"><b>Residential Address:</b></label>
+					</div>
+					<div class="input">
+						<input type="text"  name="res_address"  class="input_tag" maxlength="50" required onchange="this.className = ''">
+					</div>
+				</div>
+				<div class="p_info">
+					<div class="detail">
+						<label for="phone_no"><b>Phone Number:</b></label>
+					</div>
+					<div class="input">
+						<input type="number" name="phone_no" class="input_tag" size="11" required onchange="this.className = ''">
+					</div>
+				</div>
+				<div class="p_info">
+					<div class="detail">
+						<label for="mail"><b>Email Address:</b></label>
+					</div>
+					<div class="input">
+						<input type="email" name="mail" placeholder=" format: sf@domain.com" class="input_tag" maxlength="50">
+					</div>
+				</div>
+				<div class="p_info">
+					<div class="detail">
+						<label for="p_address"><b>Postal Address:</b></label>
+					</div>
+					<div class="input">
+						<input type="number" name="p_address" class="input_tag" maxlength="30">
+					</div>
+				</div>
+				<div class="p_info">
+					<div class="detail">
+						<label for="nin"><b>NIN/Int'l Passport (Number):</b></label>
+					</div>
+					<div class="input">
+						<input type="number" name="nin" class="input_tag" maxlength="30" required onchange="this.className = ''">
+					</div>
+				</div>
+				<div class="p_info">
+					<div class="detail">
+						<label for="m_status"><b>Marital status:</b></label>
+					</div>
+					<div class="input" >
+						<input type="radio" name="m_status" value="single">Single<br>
+						<input type="radio" name="m_status" value="married">Married<br>
+						<input type="radio" name="m_status" value="others">Others<br>
+					</div>
+				</div>
+				<div class="p_info">
+					<div class="detail">
+						<label for="occupation"><b>Occupation:</b></label>
+					</div>
+					<div class="input">
+						<input type="text" name="occupation" class="input_tag" maxlength="30" required onchange="this.className = ''">
+					</div>
+				</div>
+				<div class="p_info">
+					<div class="detail">
+						<label for="hobies"><b>Hobbies:</b></label>
+					</div>
+					<div class="input">
+						<input type="text" name="hobbies" class="input_tag" maxlength="50">
+					</div>
+				</div>
+		-->
+				<div class="p_info">
+					<div class="detail">
+						<label for="religion"><b>Religion:</b></label>
+					</div>
+					<div class="input">
+						<select name="religion" class="input_tag" required onchange="this.className = ''">
+							<option value="" selected disabled>select</option>
+  							<option value="Christainity">Christainity</option>
+  							<option value="Islam">Islam</option>
+  							<option value="Others">Others</option>
+						</select>
+					</div>
+				</div>
+			</div>
+  </fieldset>
+		<!--registeration_form2 fieldset-->
+	  <fieldset class="fieldset">
+		  <!--
+				<legend id="legend">Educational Background:</legend>
+				<div id="p_info_div">
+					<div class="p_info">
+						<div class="detail">
+							<label for="p_edu"><b>Primary Education(Name):</b></label>
+						</div>
+						<div class="input">
+							<input type="text" name="p_edu" class="input_tag" maxlength="50">
+						</div>
+					</div>
+					<div class="p_info">
+						<div class="detail">
+							<label for="start_yr1">start year:</label>
+						</div>
+						<div class="input">
+							<select class="input_tag" name="start_yr1">
+								<option value="">select</option>
+								<option value="2018">2018</option>
+								<option value="2017">2017</option>
+								<option value="2016">2016</option>
+								<option value="2015">2015</option>
+								<option value="2014">2014</option>
+								<option value="2013">2013</option>
+								<option value="2013">2012</option>
+								<option value="2011">2011</option>
+								<option value="2010">2010</option>
+								<option value="2009">2009</option>
+								<option value="2008">2008</option>
+								<option value="2007">2007</option>
+								<option value="2006">2006</option>
+								<option value="2005">2005</option>
+								<option value="2004">2004</option>
+								<option value="2003">2003</option>
+								<option value="2002">2002</option>
+								<option value="2001">2001</option>
+								<option value="2000">2000</option>
+								<option value="1999">1999</option>
+								<option value="1998">1998</option>
+								<option value="1997">1997</option>
+								<option value="1996">1996</option>
+								<option value="1995">1995</option>
+								<option value="1994">1994</option>
+								<option value="1993">1993</option>
+								<option value="1992">1992</option>
+								<option value="1991">1991</option>
+								<option value="1990">1990</option>
+								<option value="1989">1989</option>
+								<option value="1988">1988</option>
+								<option value="1987">1987</option>
+								<option value="1986">1986</option>
+								<option value="1985">1985</option>
+								<option value="1984">1984</option>
+								<option value="1983">1983</option>
+								<option value="1982">1982</option>
+								<option value="1981">1981</option>
+								<option value="1980">1980</option>
+								<option value="1979">1979</option>
+								<option value="1978">1978</option>
+								<option value="1977">1977</option>
+								<option value="1976">1976</option>
+								<option value="1975">1975</option>
+								<option value="1974">1974</option>
+								<option value="1973">1973</option>
+								<option value="1972">1972</option>
+								<option value="1971">1971</option>
+								<option value="1970">1970</option>
+								<option value="1969">1969</option>
+								<option value="1968">1968</option>
+								<option value="1967">1967</option>
+								<option value="1966">1966</option>
+								<option value="1965">1965</option>
+								<option value="1964">1964</option>
+								<option value="1963">1963</option>
+								<option value="1962">1962</option>
+								<option value="1961">1961</option>
+								<option value="1960">1960</option>
+								<option value="1959">1959</option>
+								<option value="1958">1958</option>
+								<option value="1957">1957</option>
+								<option value="1956">1956</option>
+								<option value="1955">1955</option>
+								<option value="1954">1954</option>
+								<option value="1953">1953</option>
+								<option value="1952">1952</option>
+								<option value="1951">1951</option>
+								<option value="1950">1950</option>
+								<option value="1949">1949</option>
+								<option value="1948">1948</option>
+								<option value="1947">1947</option>
+								<option value="1946">1946</option>
+								<option value="1945">1945</option>
+								<option value="1944">1944</option>
+								<option value="1943">1943</option>
+								<option value="1942">1942</option>
+								<option value="1941">1941</option>
+								<option value="1940">1940</option>
+								<option value="1939">1939</option>
+								<option value="1938">1938</option>
+								<option value="1937">1937</option>
+								<option value="1936">1936</option>
+								<option value="1935">1935</option>
+								<option value="1934">1934</option>
+								<option value="1933">1933</option>
+								<option value="1932">1932</option>
+								<option value="1931">1931</option>
+								<option value="1930">1930</option>
+								<option value="1929">1929</option>
+								<option value="1928">1928</option>
+								<option value="1927">1927</option>
+								<option value="1926">1926</option>
+								<option value="1925">1925</option>
+								<option value="1924">1924</option>
+								<option value="1923">1923</option>
+								<option value="1922">1922</option>
+								<option value="1921">1921</option>
+								<option value="1920">1920</option>
+								<option value="1919">1919</option>
+								<option value="1918">1918</option>
+								<option value="1917">1917</option>
+								<option value="1916">1916</option>
+								<option value="1915">1915</option>
+								<option value="1914">1914</option>
+								<option value="1913">1913</option>
+								<option value="1912">1912</option>
+								<option value="1911">1911</option>
+								<option value="1910">1910</option>
+								<option value="1909">1909</option>
+								<option value="1908">1908</option>
+								<option value="1907">1907</option>
+								<option value="1906">1906</option>
+								<option value="1905">1905</option>
+								<option value="1904">1904</option>
+								<option value="1903">1903</option>
+								<option value="1902">1902</option>
+								<option value="1901">1901</option>
+								<option value="1900">1900</option>
+							</select>
+						</div>
+					</div>
+					<div class="p_info">
+						<div class="detail">
+							<label for="end_yr1">end year:</label>
+						</div>
+						<div class="input">
+							<select class="input_tag" name="end_yr1">
+								<option value="">select</option>
+								<option value="2018">2018</option>
+								<option value="2017">2017</option>
+								<option value="2016">2016</option>
+								<option value="2015">2015</option>
+								<option value="2014">2014</option>
+								<option value="2013">2013</option>
+								<option value="2013">2012</option>
+								<option value="2011">2011</option>
+								<option value="2010">2010</option>
+								<option value="2009">2009</option>
+								<option value="2008">2008</option>
+								<option value="2007">2007</option>
+								<option value="2006">2006</option>
+								<option value="2005">2005</option>
+								<option value="2004">2004</option>
+								<option value="2003">2003</option>
+								<option value="2002">2002</option>
+								<option value="2001">2001</option>
+								<option value="2000">2000</option>
+								<option value="1999">1999</option>
+								<option value="1998">1998</option>
+								<option value="1997">1997</option>
+								<option value="1996">1996</option>
+								<option value="1995">1995</option>
+								<option value="1994">1994</option>
+								<option value="1993">1993</option>
+								<option value="1992">1992</option>
+								<option value="1991">1991</option>
+								<option value="1990">1990</option>
+								<option value="1989">1989</option>
+								<option value="1988">1988</option>
+								<option value="1987">1987</option>
+								<option value="1986">1986</option>
+								<option value="1985">1985</option>
+								<option value="1984">1984</option>
+								<option value="1983">1983</option>
+								<option value="1982">1982</option>
+								<option value="1981">1981</option>
+								<option value="1980">1980</option>
+								<option value="1979">1979</option>
+								<option value="1978">1978</option>
+								<option value="1977">1977</option>
+								<option value="1976">1976</option>
+								<option value="1975">1975</option>
+								<option value="1974">1974</option>
+								<option value="1973">1973</option>
+								<option value="1972">1972</option>
+								<option value="1971">1971</option>
+								<option value="1970">1970</option>
+								<option value="1969">1969</option>
+								<option value="1968">1968</option>
+								<option value="1967">1967</option>
+								<option value="1966">1966</option>
+								<option value="1965">1965</option>
+								<option value="1964">1964</option>
+								<option value="1963">1963</option>
+								<option value="1962">1962</option>
+								<option value="1961">1961</option>
+								<option value="1960">1960</option>
+								<option value="1959">1959</option>
+								<option value="1958">1958</option>
+								<option value="1957">1957</option>
+								<option value="1956">1956</option>
+								<option value="1955">1955</option>
+								<option value="1954">1954</option>
+								<option value="1953">1953</option>
+								<option value="1952">1952</option>
+								<option value="1951">1951</option>
+								<option value="1950">1950</option>
+								<option value="1949">1949</option>
+								<option value="1948">1948</option>
+								<option value="1947">1947</option>
+								<option value="1946">1946</option>
+								<option value="1945">1945</option>
+								<option value="1944">1944</option>
+								<option value="1943">1943</option>
+								<option value="1942">1942</option>
+								<option value="1941">1941</option>
+								<option value="1940">1940</option>
+								<option value="1939">1939</option>
+								<option value="1938">1938</option>
+								<option value="1937">1937</option>
+								<option value="1936">1936</option>
+								<option value="1935">1935</option>
+								<option value="1934">1934</option>
+								<option value="1933">1933</option>
+								<option value="1932">1932</option>
+								<option value="1931">1931</option>
+								<option value="1930">1930</option>
+								<option value="1929">1929</option>
+								<option value="1928">1928</option>
+								<option value="1927">1927</option>
+								<option value="1926">1926</option>
+								<option value="1925">1925</option>
+								<option value="1924">1924</option>
+								<option value="1923">1923</option>
+								<option value="1922">1922</option>
+								<option value="1921">1921</option>
+								<option value="1920">1920</option>
+								<option value="1919">1919</option>
+								<option value="1918">1918</option>
+								<option value="1917">1917</option>
+								<option value="1916">1916</option>
+								<option value="1915">1915</option>
+								<option value="1914">1914</option>
+								<option value="1913">1913</option>
+								<option value="1912">1912</option>
+								<option value="1911">1911</option>
+								<option value="1910">1910</option>
+								<option value="1909">1909</option>
+								<option value="1908">1908</option>
+								<option value="1907">1907</option>
+								<option value="1906">1906</option>
+								<option value="1905">1905</option>
+								<option value="1904">1904</option>
+								<option value="1903">1903</option>
+								<option value="1902">1902</option>
+								<option value="1901">1901</option>
+								<option value="1900">1900</option>
+							</select>
+						</div>
+						</div>
+					<div class="p_info">
+						<div class="detail">
+							<label for="cert1">certificate issued:</label>
+						</div>
+						<div class="input">
+							<input type="text" name="cert1" class="input_tag" maxlength="50">
+						</div>
+					</div>
+					<div class="p_info">
+						<div class="detail">
+							<label for="sec_edu"><b>Secondary Education(Name):</b></label>
+						</div>
+						<div class="input">
+							<input type="text" name="sec_edu" class="input_tag" maxlength="50">
+						</div>
+					</div>
+					<div class="p_info">
+						<div class="detail">
+							<label for="start_yr2">start year:</label>
+						</div>
+						<div class="input">
+							<select class="input_tag" name="start_yr2">
+								<option value="">select</option>
+								<option value="2018">2018</option>
+								<option value="2017">2017</option>
+								<option value="2016">2016</option>
+								<option value="2015">2015</option>
+								<option value="2014">2014</option>
+								<option value="2013">2013</option>
+								<option value="2013">2012</option>
+								<option value="2011">2011</option>
+								<option value="2010">2010</option>
+								<option value="2009">2009</option>
+								<option value="2008">2008</option>
+								<option value="2007">2007</option>
+								<option value="2006">2006</option>
+								<option value="2005">2005</option>
+								<option value="2004">2004</option>
+								<option value="2003">2003</option>
+								<option value="2002">2002</option>
+								<option value="2001">2001</option>
+								<option value="2000">2000</option>
+								<option value="1999">1999</option>
+								<option value="1998">1998</option>
+								<option value="1997">1997</option>
+								<option value="1996">1996</option>
+								<option value="1995">1995</option>
+								<option value="1994">1994</option>
+								<option value="1993">1993</option>
+								<option value="1992">1992</option>
+								<option value="1991">1991</option>
+								<option value="1990">1990</option>
+								<option value="1989">1989</option>
+								<option value="1988">1988</option>
+								<option value="1987">1987</option>
+								<option value="1986">1986</option>
+								<option value="1985">1985</option>
+								<option value="1984">1984</option>
+								<option value="1983">1983</option>
+								<option value="1982">1982</option>
+								<option value="1981">1981</option>
+								<option value="1980">1980</option>
+								<option value="1979">1979</option>
+								<option value="1978">1978</option>
+								<option value="1977">1977</option>
+								<option value="1976">1976</option>
+								<option value="1975">1975</option>
+								<option value="1974">1974</option>
+								<option value="1973">1973</option>
+								<option value="1972">1972</option>
+								<option value="1971">1971</option>
+								<option value="1970">1970</option>
+								<option value="1969">1969</option>
+								<option value="1968">1968</option>
+								<option value="1967">1967</option>
+								<option value="1966">1966</option>
+								<option value="1965">1965</option>
+								<option value="1964">1964</option>
+								<option value="1963">1963</option>
+								<option value="1962">1962</option>
+								<option value="1961">1961</option>
+								<option value="1960">1960</option>
+								<option value="1959">1959</option>
+								<option value="1958">1958</option>
+								<option value="1957">1957</option>
+								<option value="1956">1956</option>
+								<option value="1955">1955</option>
+								<option value="1954">1954</option>
+								<option value="1953">1953</option>
+								<option value="1952">1952</option>
+								<option value="1951">1951</option>
+								<option value="1950">1950</option>
+								<option value="1949">1949</option>
+								<option value="1948">1948</option>
+								<option value="1947">1947</option>
+								<option value="1946">1946</option>
+								<option value="1945">1945</option>
+								<option value="1944">1944</option>
+								<option value="1943">1943</option>
+								<option value="1942">1942</option>
+								<option value="1941">1941</option>
+								<option value="1940">1940</option>
+								<option value="1939">1939</option>
+								<option value="1938">1938</option>
+								<option value="1937">1937</option>
+								<option value="1936">1936</option>
+								<option value="1935">1935</option>
+								<option value="1934">1934</option>
+								<option value="1933">1933</option>
+								<option value="1932">1932</option>
+								<option value="1931">1931</option>
+								<option value="1930">1930</option>
+								<option value="1929">1929</option>
+								<option value="1928">1928</option>
+								<option value="1927">1927</option>
+								<option value="1926">1926</option>
+								<option value="1925">1925</option>
+								<option value="1924">1924</option>
+								<option value="1923">1923</option>
+								<option value="1922">1922</option>
+								<option value="1921">1921</option>
+								<option value="1920">1920</option>
+								<option value="1919">1919</option>
+								<option value="1918">1918</option>
+								<option value="1917">1917</option>
+								<option value="1916">1916</option>
+								<option value="1915">1915</option>
+								<option value="1914">1914</option>
+								<option value="1913">1913</option>
+								<option value="1912">1912</option>
+								<option value="1911">1911</option>
+								<option value="1910">1910</option>
+								<option value="1909">1909</option>
+								<option value="1908">1908</option>
+								<option value="1907">1907</option>
+								<option value="1906">1906</option>
+								<option value="1905">1905</option>
+								<option value="1904">1904</option>
+								<option value="1903">1903</option>
+								<option value="1902">1902</option>
+								<option value="1901">1901</option>
+								<option value="1900">1900</option>
+							</select>
+						</div>
+					</div>
+					<div class="p_info">
+						<div class="detail">
+							<label for="end_yr2">end year:</label>
+						</div>
+						<div class="input">
+							<select class="input_tag" name="end_yr2">
+								<option value="">select</option>
+								<option value="2018">2018</option>
+								<option value="2017">2017</option>
+								<option value="2016">2016</option>
+								<option value="2015">2015</option>
+								<option value="2014">2014</option>
+								<option value="2013">2013</option>
+								<option value="2013">2012</option>
+								<option value="2011">2011</option>
+								<option value="2010">2010</option>
+								<option value="2009">2009</option>
+								<option value="2008">2008</option>
+								<option value="2007">2007</option>
+								<option value="2006">2006</option>
+								<option value="2005">2005</option>
+								<option value="2004">2004</option>
+								<option value="2003">2003</option>
+								<option value="2002">2002</option>
+								<option value="2001">2001</option>
+								<option value="2000">2000</option>
+								<option value="1999">1999</option>
+								<option value="1998">1998</option>
+								<option value="1997">1997</option>
+								<option value="1996">1996</option>
+								<option value="1995">1995</option>
+								<option value="1994">1994</option>
+								<option value="1993">1993</option>
+								<option value="1992">1992</option>
+								<option value="1991">1991</option>
+								<option value="1990">1990</option>
+								<option value="1989">1989</option>
+								<option value="1988">1988</option>
+								<option value="1987">1987</option>
+								<option value="1986">1986</option>
+								<option value="1985">1985</option>
+								<option value="1984">1984</option>
+								<option value="1983">1983</option>
+								<option value="1982">1982</option>
+								<option value="1981">1981</option>
+								<option value="1980">1980</option>
+								<option value="1979">1979</option>
+								<option value="1978">1978</option>
+								<option value="1977">1977</option>
+								<option value="1976">1976</option>
+								<option value="1975">1975</option>
+								<option value="1974">1974</option>
+								<option value="1973">1973</option>
+								<option value="1972">1972</option>
+								<option value="1971">1971</option>
+								<option value="1970">1970</option>
+								<option value="1969">1969</option>
+								<option value="1968">1968</option>
+								<option value="1967">1967</option>
+								<option value="1966">1966</option>
+								<option value="1965">1965</option>
+								<option value="1964">1964</option>
+								<option value="1963">1963</option>
+								<option value="1962">1962</option>
+								<option value="1961">1961</option>
+								<option value="1960">1960</option>
+								<option value="1959">1959</option>
+								<option value="1958">1958</option>
+								<option value="1957">1957</option>
+								<option value="1956">1956</option>
+								<option value="1955">1955</option>
+								<option value="1954">1954</option>
+								<option value="1953">1953</option>
+								<option value="1952">1952</option>
+								<option value="1951">1951</option>
+								<option value="1950">1950</option>
+								<option value="1949">1949</option>
+								<option value="1948">1948</option>
+								<option value="1947">1947</option>
+								<option value="1946">1946</option>
+								<option value="1945">1945</option>
+								<option value="1944">1944</option>
+								<option value="1943">1943</option>
+								<option value="1942">1942</option>
+								<option value="1941">1941</option>
+								<option value="1940">1940</option>
+								<option value="1939">1939</option>
+								<option value="1938">1938</option>
+								<option value="1937">1937</option>
+								<option value="1936">1936</option>
+								<option value="1935">1935</option>
+								<option value="1934">1934</option>
+								<option value="1933">1933</option>
+								<option value="1932">1932</option>
+								<option value="1931">1931</option>
+								<option value="1930">1930</option>
+								<option value="1929">1929</option>
+								<option value="1928">1928</option>
+								<option value="1927">1927</option>
+								<option value="1926">1926</option>
+								<option value="1925">1925</option>
+								<option value="1924">1924</option>
+								<option value="1923">1923</option>
+								<option value="1922">1922</option>
+								<option value="1921">1921</option>
+								<option value="1920">1920</option>
+								<option value="1919">1919</option>
+								<option value="1918">1918</option>
+								<option value="1917">1917</option>
+								<option value="1916">1916</option>
+								<option value="1915">1915</option>
+								<option value="1914">1914</option>
+								<option value="1913">1913</option>
+								<option value="1912">1912</option>
+								<option value="1911">1911</option>
+								<option value="1910">1910</option>
+								<option value="1909">1909</option>
+								<option value="1908">1908</option>
+								<option value="1907">1907</option>
+								<option value="1906">1906</option>
+								<option value="1905">1905</option>
+								<option value="1904">1904</option>
+								<option value="1903">1903</option>
+								<option value="1902">1902</option>
+								<option value="1901">1901</option>
+								<option value="1900">1900</option>
+							</select>
+						</div>
+					</div>
+					<div class="p_info">
+						<div class="detail">
+							<label for="cert2">certificate issued:</label>
+						</div>
+						<div class="input">
+							<input type="text" name="cert2" class="input_tag" maxlength="50">
+						</div>
+					</div>
+					<div class="p_info">
+						<div class="detail">
+							<label for="tert_edu"><b>Tertiary Education(Name):</b></label>
+						</div>
+						<div class="input">
+							<input type="tel" name="tert_edu" class="input_tag" maxlength="50">
+						</div>
+					</div>
+					<div class="p_info">
+						<div class="detail">
+							<label for="start_yr3">start year:</label>
+						</div>
+						<div class="input">
+							<select class="input_tag" name="start_yr3">
+								<option value="">select</option>
+								<option value="2018">2018</option>
+								<option value="2017">2017</option>
+								<option value="2016">2016</option>
+								<option value="2015">2015</option>
+								<option value="2014">2014</option>
+								<option value="2013">2013</option>
+								<option value="2013">2012</option>
+								<option value="2011">2011</option>
+								<option value="2010">2010</option>
+								<option value="2009">2009</option>
+								<option value="2008">2008</option>
+								<option value="2007">2007</option>
+								<option value="2006">2006</option>
+								<option value="2005">2005</option>
+								<option value="2004">2004</option>
+								<option value="2003">2003</option>
+								<option value="2002">2002</option>
+								<option value="2001">2001</option>
+								<option value="2000">2000</option>
+								<option value="1999">1999</option>
+								<option value="1998">1998</option>
+								<option value="1997">1997</option>
+								<option value="1996">1996</option>
+								<option value="1995">1995</option>
+								<option value="1994">1994</option>
+								<option value="1993">1993</option>
+								<option value="1992">1992</option>
+								<option value="1991">1991</option>
+								<option value="1990">1990</option>
+								<option value="1989">1989</option>
+								<option value="1988">1988</option>
+								<option value="1987">1987</option>
+								<option value="1986">1986</option>
+								<option value="1985">1985</option>
+								<option value="1984">1984</option>
+								<option value="1983">1983</option>
+								<option value="1982">1982</option>
+								<option value="1981">1981</option>
+								<option value="1980">1980</option>
+								<option value="1979">1979</option>
+								<option value="1978">1978</option>
+								<option value="1977">1977</option>
+								<option value="1976">1976</option>
+								<option value="1975">1975</option>
+								<option value="1974">1974</option>
+								<option value="1973">1973</option>
+								<option value="1972">1972</option>
+								<option value="1971">1971</option>
+								<option value="1970">1970</option>
+								<option value="1969">1969</option>
+								<option value="1968">1968</option>
+								<option value="1967">1967</option>
+								<option value="1966">1966</option>
+								<option value="1965">1965</option>
+								<option value="1964">1964</option>
+								<option value="1963">1963</option>
+								<option value="1962">1962</option>
+								<option value="1961">1961</option>
+								<option value="1960">1960</option>
+								<option value="1959">1959</option>
+								<option value="1958">1958</option>
+								<option value="1957">1957</option>
+								<option value="1956">1956</option>
+								<option value="1955">1955</option>
+								<option value="1954">1954</option>
+								<option value="1953">1953</option>
+								<option value="1952">1952</option>
+								<option value="1951">1951</option>
+								<option value="1950">1950</option>
+								<option value="1949">1949</option>
+								<option value="1948">1948</option>
+								<option value="1947">1947</option>
+								<option value="1946">1946</option>
+								<option value="1945">1945</option>
+								<option value="1944">1944</option>
+								<option value="1943">1943</option>
+								<option value="1942">1942</option>
+								<option value="1941">1941</option>
+								<option value="1940">1940</option>
+								<option value="1939">1939</option>
+								<option value="1938">1938</option>
+								<option value="1937">1937</option>
+								<option value="1936">1936</option>
+								<option value="1935">1935</option>
+								<option value="1934">1934</option>
+								<option value="1933">1933</option>
+								<option value="1932">1932</option>
+								<option value="1931">1931</option>
+								<option value="1930">1930</option>
+								<option value="1929">1929</option>
+								<option value="1928">1928</option>
+								<option value="1927">1927</option>
+								<option value="1926">1926</option>
+								<option value="1925">1925</option>
+								<option value="1924">1924</option>
+								<option value="1923">1923</option>
+								<option value="1922">1922</option>
+								<option value="1921">1921</option>
+								<option value="1920">1920</option>
+								<option value="1919">1919</option>
+								<option value="1918">1918</option>
+								<option value="1917">1917</option>
+								<option value="1916">1916</option>
+								<option value="1915">1915</option>
+								<option value="1914">1914</option>
+								<option value="1913">1913</option>
+								<option value="1912">1912</option>
+								<option value="1911">1911</option>
+								<option value="1910">1910</option>
+								<option value="1909">1909</option>
+								<option value="1908">1908</option>
+								<option value="1907">1907</option>
+								<option value="1906">1906</option>
+								<option value="1905">1905</option>
+								<option value="1904">1904</option>
+								<option value="1903">1903</option>
+								<option value="1902">1902</option>
+								<option value="1901">1901</option>
+								<option value="1900">1900</option>
+							</select>
+						</div>
+					</div>
+					<div class="p_info">
+						<div class="detail">
+							<label for="end_yr3">end year:</label>
+						</div>
+						<div class="input">
+							<select class="input_tag" name="end_yr3">
+								<option value="">select</option>
+								<option value="2018">2018</option>
+								<option value="2017">2017</option>
+								<option value="2016">2016</option>
+								<option value="2015">2015</option>
+								<option value="2014">2014</option>
+								<option value="2013">2013</option>
+								<option value="2013">2012</option>
+								<option value="2011">2011</option>
+								<option value="2010">2010</option>
+								<option value="2009">2009</option>
+								<option value="2008">2008</option>
+								<option value="2007">2007</option>
+								<option value="2006">2006</option>
+								<option value="2005">2005</option>
+								<option value="2004">2004</option>
+								<option value="2003">2003</option>
+								<option value="2002">2002</option>
+								<option value="2001">2001</option>
+								<option value="2000">2000</option>
+								<option value="1999">1999</option>
+								<option value="1998">1998</option>
+								<option value="1997">1997</option>
+								<option value="1996">1996</option>
+								<option value="1995">1995</option>
+								<option value="1994">1994</option>
+								<option value="1993">1993</option>
+								<option value="1992">1992</option>
+								<option value="1991">1991</option>
+								<option value="1990">1990</option>
+								<option value="1989">1989</option>
+								<option value="1988">1988</option>
+								<option value="1987">1987</option>
+								<option value="1986">1986</option>
+								<option value="1985">1985</option>
+								<option value="1984">1984</option>
+								<option value="1983">1983</option>
+								<option value="1982">1982</option>
+								<option value="1981">1981</option>
+								<option value="1980">1980</option>
+								<option value="1979">1979</option>
+								<option value="1978">1978</option>
+								<option value="1977">1977</option>
+								<option value="1976">1976</option>
+								<option value="1975">1975</option>
+								<option value="1974">1974</option>
+								<option value="1973">1973</option>
+								<option value="1972">1972</option>
+								<option value="1971">1971</option>
+								<option value="1970">1970</option>
+								<option value="1969">1969</option>
+								<option value="1968">1968</option>
+								<option value="1967">1967</option>
+								<option value="1966">1966</option>
+								<option value="1965">1965</option>
+								<option value="1964">1964</option>
+								<option value="1963">1963</option>
+								<option value="1962">1962</option>
+								<option value="1961">1961</option>
+								<option value="1960">1960</option>
+								<option value="1959">1959</option>
+								<option value="1958">1958</option>
+								<option value="1957">1957</option>
+								<option value="1956">1956</option>
+								<option value="1955">1955</option>
+								<option value="1954">1954</option>
+								<option value="1953">1953</option>
+								<option value="1952">1952</option>
+								<option value="1951">1951</option>
+								<option value="1950">1950</option>
+								<option value="1949">1949</option>
+								<option value="1948">1948</option>
+								<option value="1947">1947</option>
+								<option value="1946">1946</option>
+								<option value="1945">1945</option>
+								<option value="1944">1944</option>
+								<option value="1943">1943</option>
+								<option value="1942">1942</option>
+								<option value="1941">1941</option>
+								<option value="1940">1940</option>
+								<option value="1939">1939</option>
+								<option value="1938">1938</option>
+								<option value="1937">1937</option>
+								<option value="1936">1936</option>
+								<option value="1935">1935</option>
+								<option value="1934">1934</option>
+								<option value="1933">1933</option>
+								<option value="1932">1932</option>
+								<option value="1931">1931</option>
+								<option value="1930">1930</option>
+								<option value="1929">1929</option>
+								<option value="1928">1928</option>
+								<option value="1927">1927</option>
+								<option value="1926">1926</option>
+								<option value="1925">1925</option>
+								<option value="1924">1924</option>
+								<option value="1923">1923</option>
+								<option value="1922">1922</option>
+								<option value="1921">1921</option>
+								<option value="1920">1920</option>
+								<option value="1919">1919</option>
+								<option value="1918">1918</option>
+								<option value="1917">1917</option>
+								<option value="1916">1916</option>
+								<option value="1915">1915</option>
+								<option value="1914">1914</option>
+								<option value="1913">1913</option>
+								<option value="1912">1912</option>
+								<option value="1911">1911</option>
+								<option value="1910">1910</option>
+								<option value="1909">1909</option>
+								<option value="1908">1908</option>
+								<option value="1907">1907</option>
+								<option value="1906">1906</option>
+								<option value="1905">1905</option>
+								<option value="1904">1904</option>
+								<option value="1903">1903</option>
+								<option value="1902">1902</option>
+								<option value="1901">1901</option>
+								<option value="1900">1900</option>
+							</select>
+						</div>
+					</div>
+					<div class="p_info">
+						<div class="detail">
+							<label for="cert3">certificate issued:</label>
+						</div>
+						<div class="input">
+							<input type="text" name="lastname" class="input_tag" maxlength="50">
+						</div>
+					</div>
+					<div class="p_info">
+						<div class="detail">
+							<label for="other_cert1"><b>Other Certifications (1):</b></label>
+						</div>
+						<div class="input">
+							<input type="text" name="other_cert1" class="input_tag" maxlength="50">
+						</div>
+					</div>
+					<div class="p_info">
+						<div class="detail">
+							<label for="start_yr4">start year:</label>
+						</div>
+						<div class="input">
+							<select class="input_tag" name="start_yr4">
+								<option value="">select</option>
+								<option value="2018">2018</option>
+								<option value="2017">2017</option>
+								<option value="2016">2016</option>
+								<option value="2015">2015</option>
+								<option value="2014">2014</option>
+								<option value="2013">2013</option>
+								<option value="2013">2012</option>
+								<option value="2011">2011</option>
+								<option value="2010">2010</option>
+								<option value="2009">2009</option>
+								<option value="2008">2008</option>
+								<option value="2007">2007</option>
+								<option value="2006">2006</option>
+								<option value="2005">2005</option>
+								<option value="2004">2004</option>
+								<option value="2003">2003</option>
+								<option value="2002">2002</option>
+								<option value="2001">2001</option>
+								<option value="2000">2000</option>
+								<option value="1999">1999</option>
+								<option value="1998">1998</option>
+								<option value="1997">1997</option>
+								<option value="1996">1996</option>
+								<option value="1995">1995</option>
+								<option value="1994">1994</option>
+								<option value="1993">1993</option>
+								<option value="1992">1992</option>
+								<option value="1991">1991</option>
+								<option value="1990">1990</option>
+								<option value="1989">1989</option>
+								<option value="1988">1988</option>
+								<option value="1987">1987</option>
+								<option value="1986">1986</option>
+								<option value="1985">1985</option>
+								<option value="1984">1984</option>
+								<option value="1983">1983</option>
+								<option value="1982">1982</option>
+								<option value="1981">1981</option>
+								<option value="1980">1980</option>
+								<option value="1979">1979</option>
+								<option value="1978">1978</option>
+								<option value="1977">1977</option>
+								<option value="1976">1976</option>
+								<option value="1975">1975</option>
+								<option value="1974">1974</option>
+								<option value="1973">1973</option>
+								<option value="1972">1972</option>
+								<option value="1971">1971</option>
+								<option value="1970">1970</option>
+								<option value="1969">1969</option>
+								<option value="1968">1968</option>
+								<option value="1967">1967</option>
+								<option value="1966">1966</option>
+								<option value="1965">1965</option>
+								<option value="1964">1964</option>
+								<option value="1963">1963</option>
+								<option value="1962">1962</option>
+								<option value="1961">1961</option>
+								<option value="1960">1960</option>
+								<option value="1959">1959</option>
+								<option value="1958">1958</option>
+								<option value="1957">1957</option>
+								<option value="1956">1956</option>
+								<option value="1955">1955</option>
+								<option value="1954">1954</option>
+								<option value="1953">1953</option>
+								<option value="1952">1952</option>
+								<option value="1951">1951</option>
+								<option value="1950">1950</option>
+								<option value="1949">1949</option>
+								<option value="1948">1948</option>
+								<option value="1947">1947</option>
+								<option value="1946">1946</option>
+								<option value="1945">1945</option>
+								<option value="1944">1944</option>
+								<option value="1943">1943</option>
+								<option value="1942">1942</option>
+								<option value="1941">1941</option>
+								<option value="1940">1940</option>
+								<option value="1939">1939</option>
+								<option value="1938">1938</option>
+								<option value="1937">1937</option>
+								<option value="1936">1936</option>
+								<option value="1935">1935</option>
+								<option value="1934">1934</option>
+								<option value="1933">1933</option>
+								<option value="1932">1932</option>
+								<option value="1931">1931</option>
+								<option value="1930">1930</option>
+								<option value="1929">1929</option>
+								<option value="1928">1928</option>
+								<option value="1927">1927</option>
+								<option value="1926">1926</option>
+								<option value="1925">1925</option>
+								<option value="1924">1924</option>
+								<option value="1923">1923</option>
+								<option value="1922">1922</option>
+								<option value="1921">1921</option>
+								<option value="1920">1920</option>
+								<option value="1919">1919</option>
+								<option value="1918">1918</option>
+								<option value="1917">1917</option>
+								<option value="1916">1916</option>
+								<option value="1915">1915</option>
+								<option value="1914">1914</option>
+								<option value="1913">1913</option>
+								<option value="1912">1912</option>
+								<option value="1911">1911</option>
+								<option value="1910">1910</option>
+								<option value="1909">1909</option>
+								<option value="1908">1908</option>
+								<option value="1907">1907</option>
+								<option value="1906">1906</option>
+								<option value="1905">1905</option>
+								<option value="1904">1904</option>
+								<option value="1903">1903</option>
+								<option value="1902">1902</option>
+								<option value="1901">1901</option>
+								<option value="1900">1900</option>
+							</select>
+						</div>
+					</div>
+					<div class="p_info">
+						<div class="detail">
+							<label for="end_yr4">end year:</label>
+						</div>
+						<div class="input">
+							<select class="input_tag" name="end_yr4">
+								<option value="">select</option>
+								<option value="2018">2018</option>
+								<option value="2017">2017</option>
+								<option value="2016">2016</option>
+								<option value="2015">2015</option>
+								<option value="2014">2014</option>
+								<option value="2013">2013</option>
+								<option value="2013">2012</option>
+								<option value="2011">2011</option>
+								<option value="2010">2010</option>
+								<option value="2009">2009</option>
+								<option value="2008">2008</option>
+								<option value="2007">2007</option>
+								<option value="2006">2006</option>
+								<option value="2005">2005</option>
+								<option value="2004">2004</option>
+								<option value="2003">2003</option>
+								<option value="2002">2002</option>
+								<option value="2001">2001</option>
+								<option value="2000">2000</option>
+								<option value="1999">1999</option>
+								<option value="1998">1998</option>
+								<option value="1997">1997</option>
+								<option value="1996">1996</option>
+								<option value="1995">1995</option>
+								<option value="1994">1994</option>
+								<option value="1993">1993</option>
+								<option value="1992">1992</option>
+								<option value="1991">1991</option>
+								<option value="1990">1990</option>
+								<option value="1989">1989</option>
+								<option value="1988">1988</option>
+								<option value="1987">1987</option>
+								<option value="1986">1986</option>
+								<option value="1985">1985</option>
+								<option value="1984">1984</option>
+								<option value="1983">1983</option>
+								<option value="1982">1982</option>
+								<option value="1981">1981</option>
+								<option value="1980">1980</option>
+								<option value="1979">1979</option>
+								<option value="1978">1978</option>
+								<option value="1977">1977</option>
+								<option value="1976">1976</option>
+								<option value="1975">1975</option>
+								<option value="1974">1974</option>
+								<option value="1973">1973</option>
+								<option value="1972">1972</option>
+								<option value="1971">1971</option>
+								<option value="1970">1970</option>
+								<option value="1969">1969</option>
+								<option value="1968">1968</option>
+								<option value="1967">1967</option>
+								<option value="1966">1966</option>
+								<option value="1965">1965</option>
+								<option value="1964">1964</option>
+								<option value="1963">1963</option>
+								<option value="1962">1962</option>
+								<option value="1961">1961</option>
+								<option value="1960">1960</option>
+								<option value="1959">1959</option>
+								<option value="1958">1958</option>
+								<option value="1957">1957</option>
+								<option value="1956">1956</option>
+								<option value="1955">1955</option>
+								<option value="1954">1954</option>
+								<option value="1953">1953</option>
+								<option value="1952">1952</option>
+								<option value="1951">1951</option>
+								<option value="1950">1950</option>
+								<option value="1949">1949</option>
+								<option value="1948">1948</option>
+								<option value="1947">1947</option>
+								<option value="1946">1946</option>
+								<option value="1945">1945</option>
+								<option value="1944">1944</option>
+								<option value="1943">1943</option>
+								<option value="1942">1942</option>
+								<option value="1941">1941</option>
+								<option value="1940">1940</option>
+								<option value="1939">1939</option>
+								<option value="1938">1938</option>
+								<option value="1937">1937</option>
+								<option value="1936">1936</option>
+								<option value="1935">1935</option>
+								<option value="1934">1934</option>
+								<option value="1933">1933</option>
+								<option value="1932">1932</option>
+								<option value="1931">1931</option>
+								<option value="1930">1930</option>
+								<option value="1929">1929</option>
+								<option value="1928">1928</option>
+								<option value="1927">1927</option>
+								<option value="1926">1926</option>
+								<option value="1925">1925</option>
+								<option value="1924">1924</option>
+								<option value="1923">1923</option>
+								<option value="1922">1922</option>
+								<option value="1921">1921</option>
+								<option value="1920">1920</option>
+								<option value="1919">1919</option>
+								<option value="1918">1918</option>
+								<option value="1917">1917</option>
+								<option value="1916">1916</option>
+								<option value="1915">1915</option>
+								<option value="1914">1914</option>
+								<option value="1913">1913</option>
+								<option value="1912">1912</option>
+								<option value="1911">1911</option>
+								<option value="1910">1910</option>
+								<option value="1909">1909</option>
+								<option value="1908">1908</option>
+								<option value="1907">1907</option>
+								<option value="1906">1906</option>
+								<option value="1905">1905</option>
+								<option value="1904">1904</option>
+								<option value="1903">1903</option>
+								<option value="1902">1902</option>
+								<option value="1901">1901</option>
+								<option value="1900">1900</option>
+							</select>
+						</div>
+					</div>
+					<div class="p_info">
+						<div class="detail">
+							<label for="cert4">certificate issued:</label>
+						</div>
+						<div class="input">
+							<input type="text" name="cert4" class="input_tag" maxlength="50">
+						</div>
+					</div>
+					<div class="p_info">
+						<div class="detail">
+							<label for="other_cert2"><b>Other Certifications (2):</b></label>
+						</div>
+						<div class="input">
+							<input type="text" name="other_cert2" class="input_tag" maxlength="50">
+						</div>
+					</div>
+					<div class="p_info">
+						<div class="detail">
+							<label for="start_yr5">start year:</label>
+						</div>
+						<div class="input">
+							<select class="input_tag" name="start_yr5">
+								<option value="">select</option>
+								<option value="2018">2018</option>
+								<option value="2017">2017</option>
+								<option value="2016">2016</option>
+								<option value="2015">2015</option>
+								<option value="2014">2014</option>
+								<option value="2013">2013</option>
+								<option value="2013">2012</option>
+								<option value="2011">2011</option>
+								<option value="2010">2010</option>
+								<option value="2009">2009</option>
+								<option value="2008">2008</option>
+								<option value="2007">2007</option>
+								<option value="2006">2006</option>
+								<option value="2005">2005</option>
+								<option value="2004">2004</option>
+								<option value="2003">2003</option>
+								<option value="2002">2002</option>
+								<option value="2001">2001</option>
+								<option value="2000">2000</option>
+								<option value="1999">1999</option>
+								<option value="1998">1998</option>
+								<option value="1997">1997</option>
+								<option value="1996">1996</option>
+								<option value="1995">1995</option>
+								<option value="1994">1994</option>
+								<option value="1993">1993</option>
+								<option value="1992">1992</option>
+								<option value="1991">1991</option>
+								<option value="1990">1990</option>
+								<option value="1989">1989</option>
+								<option value="1988">1988</option>
+								<option value="1987">1987</option>
+								<option value="1986">1986</option>
+								<option value="1985">1985</option>
+								<option value="1984">1984</option>
+								<option value="1983">1983</option>
+								<option value="1982">1982</option>
+								<option value="1981">1981</option>
+								<option value="1980">1980</option>
+								<option value="1979">1979</option>
+								<option value="1978">1978</option>
+								<option value="1977">1977</option>
+								<option value="1976">1976</option>
+								<option value="1975">1975</option>
+								<option value="1974">1974</option>
+								<option value="1973">1973</option>
+								<option value="1972">1972</option>
+								<option value="1971">1971</option>
+								<option value="1970">1970</option>
+								<option value="1969">1969</option>
+								<option value="1968">1968</option>
+								<option value="1967">1967</option>
+								<option value="1966">1966</option>
+								<option value="1965">1965</option>
+								<option value="1964">1964</option>
+								<option value="1963">1963</option>
+								<option value="1962">1962</option>
+								<option value="1961">1961</option>
+								<option value="1960">1960</option>
+								<option value="1959">1959</option>
+								<option value="1958">1958</option>
+								<option value="1957">1957</option>
+								<option value="1956">1956</option>
+								<option value="1955">1955</option>
+								<option value="1954">1954</option>
+								<option value="1953">1953</option>
+								<option value="1952">1952</option>
+								<option value="1951">1951</option>
+								<option value="1950">1950</option>
+								<option value="1949">1949</option>
+								<option value="1948">1948</option>
+								<option value="1947">1947</option>
+								<option value="1946">1946</option>
+								<option value="1945">1945</option>
+								<option value="1944">1944</option>
+								<option value="1943">1943</option>
+								<option value="1942">1942</option>
+								<option value="1941">1941</option>
+								<option value="1940">1940</option>
+								<option value="1939">1939</option>
+								<option value="1938">1938</option>
+								<option value="1937">1937</option>
+								<option value="1936">1936</option>
+								<option value="1935">1935</option>
+								<option value="1934">1934</option>
+								<option value="1933">1933</option>
+								<option value="1932">1932</option>
+								<option value="1931">1931</option>
+								<option value="1930">1930</option>
+								<option value="1929">1929</option>
+								<option value="1928">1928</option>
+								<option value="1927">1927</option>
+								<option value="1926">1926</option>
+								<option value="1925">1925</option>
+								<option value="1924">1924</option>
+								<option value="1923">1923</option>
+								<option value="1922">1922</option>
+								<option value="1921">1921</option>
+								<option value="1920">1920</option>
+								<option value="1919">1919</option>
+								<option value="1918">1918</option>
+								<option value="1917">1917</option>
+								<option value="1916">1916</option>
+								<option value="1915">1915</option>
+								<option value="1914">1914</option>
+								<option value="1913">1913</option>
+								<option value="1912">1912</option>
+								<option value="1911">1911</option>
+								<option value="1910">1910</option>
+								<option value="1909">1909</option>
+								<option value="1908">1908</option>
+								<option value="1907">1907</option>
+								<option value="1906">1906</option>
+								<option value="1905">1905</option>
+								<option value="1904">1904</option>
+								<option value="1903">1903</option>
+								<option value="1902">1902</option>
+								<option value="1901">1901</option>
+								<option value="1900">1900</option>
+							</select>
+						</div>
+					</div>
+					<div class="p_info">
+						<div class="detail">
+							<label for="end_yr5">end year:</label>
+						</div>
+						<div class="input">
+							<select class="input_tag" name="end_yr5">
+								<option value="">select</option>
+								<option value="2018">2018</option>
+								<option value="2017">2017</option>
+								<option value="2016">2016</option>
+								<option value="2015">2015</option>
+								<option value="2014">2014</option>
+								<option value="2013">2013</option>
+								<option value="2013">2012</option>
+								<option value="2011">2011</option>
+								<option value="2010">2010</option>
+								<option value="2009">2009</option>
+								<option value="2008">2008</option>
+								<option value="2007">2007</option>
+								<option value="2006">2006</option>
+								<option value="2005">2005</option>
+								<option value="2004">2004</option>
+								<option value="2003">2003</option>
+								<option value="2002">2002</option>
+								<option value="2001">2001</option>
+								<option value="2000">2000</option>
+								<option value="1999">1999</option>
+								<option value="1998">1998</option>
+								<option value="1997">1997</option>
+								<option value="1996">1996</option>
+								<option value="1995">1995</option>
+								<option value="1994">1994</option>
+								<option value="1993">1993</option>
+								<option value="1992">1992</option>
+								<option value="1991">1991</option>
+								<option value="1990">1990</option>
+								<option value="1989">1989</option>
+								<option value="1988">1988</option>
+								<option value="1987">1987</option>
+								<option value="1986">1986</option>
+								<option value="1985">1985</option>
+								<option value="1984">1984</option>
+								<option value="1983">1983</option>
+								<option value="1982">1982</option>
+								<option value="1981">1981</option>
+								<option value="1980">1980</option>
+								<option value="1979">1979</option>
+								<option value="1978">1978</option>
+								<option value="1977">1977</option>
+								<option value="1976">1976</option>
+								<option value="1975">1975</option>
+								<option value="1974">1974</option>
+								<option value="1973">1973</option>
+								<option value="1972">1972</option>
+								<option value="1971">1971</option>
+								<option value="1970">1970</option>
+								<option value="1969">1969</option>
+								<option value="1968">1968</option>
+								<option value="1967">1967</option>
+								<option value="1966">1966</option>
+								<option value="1965">1965</option>
+								<option value="1964">1964</option>
+								<option value="1963">1963</option>
+								<option value="1962">1962</option>
+								<option value="1961">1961</option>
+								<option value="1960">1960</option>
+								<option value="1959">1959</option>
+								<option value="1958">1958</option>
+								<option value="1957">1957</option>
+								<option value="1956">1956</option>
+								<option value="1955">1955</option>
+								<option value="1954">1954</option>
+								<option value="1953">1953</option>
+								<option value="1952">1952</option>
+								<option value="1951">1951</option>
+								<option value="1950">1950</option>
+								<option value="1949">1949</option>
+								<option value="1948">1948</option>
+								<option value="1947">1947</option>
+								<option value="1946">1946</option>
+								<option value="1945">1945</option>
+								<option value="1944">1944</option>
+								<option value="1943">1943</option>
+								<option value="1942">1942</option>
+								<option value="1941">1941</option>
+								<option value="1940">1940</option>
+								<option value="1939">1939</option>
+								<option value="1938">1938</option>
+								<option value="1937">1937</option>
+								<option value="1936">1936</option>
+								<option value="1935">1935</option>
+								<option value="1934">1934</option>
+								<option value="1933">1933</option>
+								<option value="1932">1932</option>
+								<option value="1931">1931</option>
+								<option value="1930">1930</option>
+								<option value="1929">1929</option>
+								<option value="1928">1928</option>
+								<option value="1927">1927</option>
+								<option value="1926">1926</option>
+								<option value="1925">1925</option>
+								<option value="1924">1924</option>
+								<option value="1923">1923</option>
+								<option value="1922">1922</option>
+								<option value="1921">1921</option>
+								<option value="1920">1920</option>
+								<option value="1919">1919</option>
+								<option value="1918">1918</option>
+								<option value="1917">1917</option>
+								<option value="1916">1916</option>
+								<option value="1915">1915</option>
+								<option value="1914">1914</option>
+								<option value="1913">1913</option>
+								<option value="1912">1912</option>
+								<option value="1911">1911</option>
+								<option value="1910">1910</option>
+								<option value="1909">1909</option>
+								<option value="1908">1908</option>
+								<option value="1907">1907</option>
+								<option value="1906">1906</option>
+								<option value="1905">1905</option>
+								<option value="1904">1904</option>
+								<option value="1903">1903</option>
+								<option value="1902">1902</option>
+								<option value="1901">1901</option>
+								<option value="1900">1900</option>
+							</select>
+						</div>
+					</div>
+					<div class="p_info">
+						<div class="detail">
+							<label for="cert5">certificate issued:</label>
+						</div>
+						<div class="input">
+							<input type="text" name="cert5" class="input_tag" maxlength="50">
+						</div>
+					</div>
+					<div class="p_info">
+						<div class="detail">
+							<label for="other_cert3"><b>Other Certifications (3):</b></label>
+						</div>
+						<div class="input">
+							<input type="text" name="other_cert3" class="input_tag" maxlength="50">
+						</div>
+					</div>
+					<div class="p_info">
+						<div class="detail">
+							<label for="start_yr6">start year:</label>
+						</div>
+						<div class="input">
+							<select class="input_tag" name="start_yr6">
+								<option value="">select</option>
+								<option value="2018">2018</option>
+								<option value="2017">2017</option>
+								<option value="2016">2016</option>
+								<option value="2015">2015</option>
+								<option value="2014">2014</option>
+								<option value="2013">2013</option>
+								<option value="2013">2012</option>
+								<option value="2011">2011</option>
+								<option value="2010">2010</option>
+								<option value="2009">2009</option>
+								<option value="2008">2008</option>
+								<option value="2007">2007</option>
+								<option value="2006">2006</option>
+								<option value="2005">2005</option>
+								<option value="2004">2004</option>
+								<option value="2003">2003</option>
+								<option value="2002">2002</option>
+								<option value="2001">2001</option>
+								<option value="2000">2000</option>
+								<option value="1999">1999</option>
+								<option value="1998">1998</option>
+								<option value="1997">1997</option>
+								<option value="1996">1996</option>
+								<option value="1995">1995</option>
+								<option value="1994">1994</option>
+								<option value="1993">1993</option>
+								<option value="1992">1992</option>
+								<option value="1991">1991</option>
+								<option value="1990">1990</option>
+								<option value="1989">1989</option>
+								<option value="1988">1988</option>
+								<option value="1987">1987</option>
+								<option value="1986">1986</option>
+								<option value="1985">1985</option>
+								<option value="1984">1984</option>
+								<option value="1983">1983</option>
+								<option value="1982">1982</option>
+								<option value="1981">1981</option>
+								<option value="1980">1980</option>
+								<option value="1979">1979</option>
+								<option value="1978">1978</option>
+								<option value="1977">1977</option>
+								<option value="1976">1976</option>
+								<option value="1975">1975</option>
+								<option value="1974">1974</option>
+								<option value="1973">1973</option>
+								<option value="1972">1972</option>
+								<option value="1971">1971</option>
+								<option value="1970">1970</option>
+								<option value="1969">1969</option>
+								<option value="1968">1968</option>
+								<option value="1967">1967</option>
+								<option value="1966">1966</option>
+								<option value="1965">1965</option>
+								<option value="1964">1964</option>
+								<option value="1963">1963</option>
+								<option value="1962">1962</option>
+								<option value="1961">1961</option>
+								<option value="1960">1960</option>
+								<option value="1959">1959</option>
+								<option value="1958">1958</option>
+								<option value="1957">1957</option>
+								<option value="1956">1956</option>
+								<option value="1955">1955</option>
+								<option value="1954">1954</option>
+								<option value="1953">1953</option>
+								<option value="1952">1952</option>
+								<option value="1951">1951</option>
+								<option value="1950">1950</option>
+								<option value="1949">1949</option>
+								<option value="1948">1948</option>
+								<option value="1947">1947</option>
+								<option value="1946">1946</option>
+								<option value="1945">1945</option>
+								<option value="1944">1944</option>
+								<option value="1943">1943</option>
+								<option value="1942">1942</option>
+								<option value="1941">1941</option>
+								<option value="1940">1940</option>
+								<option value="1939">1939</option>
+								<option value="1938">1938</option>
+								<option value="1937">1937</option>
+								<option value="1936">1936</option>
+								<option value="1935">1935</option>
+								<option value="1934">1934</option>
+								<option value="1933">1933</option>
+								<option value="1932">1932</option>
+								<option value="1931">1931</option>
+								<option value="1930">1930</option>
+								<option value="1929">1929</option>
+								<option value="1928">1928</option>
+								<option value="1927">1927</option>
+								<option value="1926">1926</option>
+								<option value="1925">1925</option>
+								<option value="1924">1924</option>
+								<option value="1923">1923</option>
+								<option value="1922">1922</option>
+								<option value="1921">1921</option>
+								<option value="1920">1920</option>
+								<option value="1919">1919</option>
+								<option value="1918">1918</option>
+								<option value="1917">1917</option>
+								<option value="1916">1916</option>
+								<option value="1915">1915</option>
+								<option value="1914">1914</option>
+								<option value="1913">1913</option>
+								<option value="1912">1912</option>
+								<option value="1911">1911</option>
+								<option value="1910">1910</option>
+								<option value="1909">1909</option>
+								<option value="1908">1908</option>
+								<option value="1907">1907</option>
+								<option value="1906">1906</option>
+								<option value="1905">1905</option>
+								<option value="1904">1904</option>
+								<option value="1903">1903</option>
+								<option value="1902">1902</option>
+								<option value="1901">1901</option>
+								<option value="1900">1900</option>
+							</select>
+						</div>
+					</div>
+					<div class="p_info">
+						<div class="detail">
+							<label for="end_yr6">end year:</label>
+						</div>
+						<div class="input">
+							<select class="input_tag" name="end_yr6">
+								<option value="">select</option>
+								<option value="2018">2018</option>
+								<option value="2017">2017</option>
+								<option value="2016">2016</option>
+								<option value="2015">2015</option>
+								<option value="2014">2014</option>
+								<option value="2013">2013</option>
+								<option value="2013">2012</option>
+								<option value="2011">2011</option>
+								<option value="2010">2010</option>
+								<option value="2009">2009</option>
+								<option value="2008">2008</option>
+								<option value="2007">2007</option>
+								<option value="2006">2006</option>
+								<option value="2005">2005</option>
+								<option value="2004">2004</option>
+								<option value="2003">2003</option>
+								<option value="2002">2002</option>
+								<option value="2001">2001</option>
+								<option value="2000">2000</option>
+								<option value="1999">1999</option>
+								<option value="1998">1998</option>
+								<option value="1997">1997</option>
+								<option value="1996">1996</option>
+								<option value="1995">1995</option>
+								<option value="1994">1994</option>
+								<option value="1993">1993</option>
+								<option value="1992">1992</option>
+								<option value="1991">1991</option>
+								<option value="1990">1990</option>
+								<option value="1989">1989</option>
+								<option value="1988">1988</option>
+								<option value="1987">1987</option>
+								<option value="1986">1986</option>
+								<option value="1985">1985</option>
+								<option value="1984">1984</option>
+								<option value="1983">1983</option>
+								<option value="1982">1982</option>
+								<option value="1981">1981</option>
+								<option value="1980">1980</option>
+								<option value="1979">1979</option>
+								<option value="1978">1978</option>
+								<option value="1977">1977</option>
+								<option value="1976">1976</option>
+								<option value="1975">1975</option>
+								<option value="1974">1974</option>
+								<option value="1973">1973</option>
+								<option value="1972">1972</option>
+								<option value="1971">1971</option>
+								<option value="1970">1970</option>
+								<option value="1969">1969</option>
+								<option value="1968">1968</option>
+								<option value="1967">1967</option>
+								<option value="1966">1966</option>
+								<option value="1965">1965</option>
+								<option value="1964">1964</option>
+								<option value="1963">1963</option>
+								<option value="1962">1962</option>
+								<option value="1961">1961</option>
+								<option value="1960">1960</option>
+								<option value="1959">1959</option>
+								<option value="1958">1958</option>
+								<option value="1957">1957</option>
+								<option value="1956">1956</option>
+								<option value="1955">1955</option>
+								<option value="1954">1954</option>
+								<option value="1953">1953</option>
+								<option value="1952">1952</option>
+								<option value="1951">1951</option>
+								<option value="1950">1950</option>
+								<option value="1949">1949</option>
+								<option value="1948">1948</option>
+								<option value="1947">1947</option>
+								<option value="1946">1946</option>
+								<option value="1945">1945</option>
+								<option value="1944">1944</option>
+								<option value="1943">1943</option>
+								<option value="1942">1942</option>
+								<option value="1941">1941</option>
+								<option value="1940">1940</option>
+								<option value="1939">1939</option>
+								<option value="1938">1938</option>
+								<option value="1937">1937</option>
+								<option value="1936">1936</option>
+								<option value="1935">1935</option>
+								<option value="1934">1934</option>
+								<option value="1933">1933</option>
+								<option value="1932">1932</option>
+								<option value="1931">1931</option>
+								<option value="1930">1930</option>
+								<option value="1929">1929</option>
+								<option value="1928">1928</option>
+								<option value="1927">1927</option>
+								<option value="1926">1926</option>
+								<option value="1925">1925</option>
+								<option value="1924">1924</option>
+								<option value="1923">1923</option>
+								<option value="1922">1922</option>
+								<option value="1921">1921</option>
+								<option value="1920">1920</option>
+								<option value="1919">1919</option>
+								<option value="1918">1918</option>
+								<option value="1917">1917</option>
+								<option value="1916">1916</option>
+								<option value="1915">1915</option>
+								<option value="1914">1914</option>
+								<option value="1913">1913</option>
+								<option value="1912">1912</option>
+								<option value="1911">1911</option>
+								<option value="1910">1910</option>
+								<option value="1909">1909</option>
+								<option value="1908">1908</option>
+								<option value="1907">1907</option>
+								<option value="1906">1906</option>
+								<option value="1905">1905</option>
+								<option value="1904">1904</option>
+								<option value="1903">1903</option>
+								<option value="1902">1902</option>
+								<option value="1901">1901</option>
+								<option value="1900">1900</option>
+							</select>
+						</div>
+					</div>
+-->
+					<div class="p_info">
+						<div class="detail">
+							<label for="cert6">certificate issued:</label>
+						</div>
+						<div class="input">
+						<input type="text" name="cert6" class="input_tag" maxlength="50">
+					</div>
+				</div>
+			</div>
+	  </fieldset>
+		<!--registeration_form3 fieldset-->
+	  <fieldset class="fieldset">
+		  <!--
+				<legend id="legend">Supporting Documents:</legend>
+				<div id="p_info_div">
+					<div class="p_info">
+						<div class="detail">
+							<label for="pspt_upload"><b>Passport:</b></label>
+						</div>
+						<div class="input">
+							<input type="file" name="userFile" style="background-color: #ccffcc" class="input_tag" required onchange="this.className = ''">
+							<button type="submit" class="upload">&#8682; Upload</button>
+						</div>
+					</div>
+					<div class="p_info">
+						<div class="detail">
+							<label for="bc_upload"><b>Birth Certificate:</b></label>
+						</div>
+						<div class="input">
+							<input type="file" name="userFile" style="background-color: #ccffcc" class="input_tag" required onchange="this.className = ''">
+							<button type="submit" class="upload">&#8682; Upload</button>
+						</div>
+					</div>
+					<div class="p_info">
+						<div class="detail">
+							<label for="coo_upload"><b>Certificate of Origin:</b></label>
+						</div>
+						<div class="input">
+							<input type="file" name="userFile" style="background-color: #ccffcc" class="input_tag" required onchange="this.className = ''">
+							<button type="submit" class="upload">&#8682; Upload</button>
+						</div>
+					</div>
+					<div class="p_info">
+						<div class="detail">
+							<label for="pe_upload"><b>Primary Education:</b></label>
+						</div>
+						<div class="input">
+							<input type="file" name="userFile" style="background-color: #ccffcc" class="input_tag">
+							<button type="submit" class="upload">&#8682; Upload</button>
+						</div>
+					</div>
+					<div class="p_info">
+						<div class="detail">
+							<label for="se_upload"><b>Secondary Education:</b></label>
+						</div>
+						<div class="input">
+							<input type="file" name="userFile" style="background-color: #ccffcc" class="input_tag">
+							<button type="submit" class="upload">&#8682; Upload</button>
+						</div>
+					</div>
+					<div class="p_info">
+						<div class="detail">
+							<label for="te_upload"><b>Tertiary Education:</b></label>
+						</div>
+						<div class="input">
+							<input type="file" name="userFile" style="background-color: #ccffcc" class="input_tag">
+							<button type="submit" class="upload">&#8682; Upload</button>
+						</div>
+					</div>
+					<div class="p_info">
+						<div class="detail">
+							<label for="oc_upload1"><b>Other Certifications (1):</b></label>
+						</div>
+						<div class="input">
+							<input type="file" name="userFile" style="background-color: #ccffcc" class="input_tag">
+							<button type="submit" class="upload">&#8682; Upload</button>
+						</div>
+					</div>
+					<div class="p_info">
+						<div class="detail">
+							<label for="oc_upload2"><b>Other Certifications (2):</b></label>
+						</div>
+						<div class="input">
+							<input type="file"  name="userFile" style="background-color: #ccffcc" class="input_tag">
+							<button type="submit" class="upload">&#8682; Upload</button>
+						</div>
+					</div>
+					<div class="p_info">
+						<div class="detail">
+							<label for="oc_upload3"><b>Other Certifications (3):</b></label>
+						</div>
+						<div class="input">
+							<input type="file" name="userFile" style="background-color: #ccffcc" class="input_tag">
+							<button type="submit" class="upload">&#8682; Upload</button>
+						</div>
+					</div>
+-->
+					<div class="p_info">
+						<div class="detail">
+							<label for="nin_upload"><b>NIN/Int'l Passport:</b></label>
+						</div>
+
+						<div class="input">
+							<input type="file" name="userFile" style="background-color: #ccffcc" class="input_tag" >
+							<button type="submit" class="upload">&#8682; Upload</button>
+						</div>
+					</div>
+				</div>
+	  </fieldset>
+		<!--registeration_form4 fieldset-->
+	  <fieldset class="fieldset">
+		  <!--
+    		<legend id="legend">Biometric Capture:</legend>
+			<div id="p_info_div">
+				<div class="p_info">
+					<div class="detail">
+						<label for="thumb"><b>Thumb Finger:</b></label>
+					</div>
+    				<div class="input">
+						<input type="text" name="thumb" class="input_tag">
+					</div>
+				</div>
+    			<div class="p_info">
+					<div class="detail">
+						<label for="index_finger"><b>Index Finger:</b></label>
+					</div>
+    				<div class="input">
+						<input type="text" name="index_finger" class="input_tag">
+					</div>
+				</div>
+-->
+    			<div class="p_info">
+					<div class="detail">
+						<label for="last_finger"><b>Last Finger:</b></label>
+					</div>
+    				<div class="input">
+						<input type="text" name="last_finger" class="input_tag">
+					</div>
+				</div>
+			</div>	
+  </fieldset>
+		<!--Submit, previous and next buttons-->
+	  <div id="submit_div">
+			<button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+			<button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+	  </div>
+</form>
+</div>
+<footer>
+	<p><b>Caution:</b> All information entered here are henceforth properties of the federal gorvernment of Nigeria. Any entry or declaration found false could warrant prosecution if the issue arises. Please refer to the <span>terms and conditions.</span> </p>
+</footer>
+</body>
+<?php include 'regSubmit.php;'; ?>
+</html>
